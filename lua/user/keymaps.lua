@@ -20,6 +20,7 @@ vim.g.mapleader = " "
 -- GP: window navigation
 keymap("n", "<leader>v", "<C-w>v")
 keymap("n", "<leader>sh", "<C-w>s")
+keymap("n", "<leader>c", "<C-w>c")
 keymap("n", "<leader>w<Left>", "<C-w>h")
 keymap("n", "<leader>w<Down>", "<C-w>j")
 keymap("n", "<leader>w<Up>", "<C-w>k")
@@ -39,7 +40,7 @@ keymap("n", "<leader>z", ":bprevious<CR>", opts)
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
-keymap("n", "<leader>q", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<leader>c", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
