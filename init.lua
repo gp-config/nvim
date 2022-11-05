@@ -20,3 +20,5 @@ require "user.dap"
 
 require "user.leap"
 require "user.whichkey"
+require "user.cloak"
+
