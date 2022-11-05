@@ -60,6 +60,7 @@ return packer.startup(function(use)
   -- Misc
   use { "folke/which-key.nvim", commit = "61553aeb3d5ca8c11eea8be6eadf478062982ac9"}
   use { "laytan/cloak.nvim", commit = "8ffb5ef8314a543b29e23efefd5388533974bcf6" }
+  use { "windwp/nvim-ts-autotag", commit = "fdefe46c6807441460f11f11a167a2baf8e4534b"} -- auto close and auto rename html tags (depends on treesitter)
 
   -- Movement
   use { "ggandor/leap.nvim", commit = "dda4ed60f90ae889f459887449a43c4de29609bd" }
