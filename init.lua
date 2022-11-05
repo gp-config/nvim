@@ -17,3 +17,5 @@ require "user.illuminate"
 require "user.indentline"
 require "user.lsp"
 require "user.dap"
+
+require "user.leap"
