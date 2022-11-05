@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use { "folke/which-key.nvim", commit = "61553aeb3d5ca8c11eea8be6eadf478062982ac9"}
   use { "laytan/cloak.nvim", commit = "8ffb5ef8314a543b29e23efefd5388533974bcf6" }
   use { "windwp/nvim-ts-autotag", commit = "fdefe46c6807441460f11f11a167a2baf8e4534b"} -- auto close and auto rename html tags (depends on treesitter)
+  use { "mg979/vim-visual-multi", commit = "724bd53adfbaf32e129b001658b45d4c5c29ca1a" } -- multiple cursors (suck it, vim purists)
 
   -- Movement
   use { "ggandor/leap.nvim", commit = "dda4ed60f90ae889f459887449a43c4de29609bd" }
