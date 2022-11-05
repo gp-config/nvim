@@ -19,3 +19,4 @@ require "user.lsp"
 require "user.dap"
 
 require "user.leap"
+require "user.whichkey"
