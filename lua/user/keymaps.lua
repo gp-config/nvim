@@ -55,8 +55,8 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- LSP
-keymap("n", "<leader>ca <cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-keymap("n", "<leader>rr <cmd>lua vim.lsp.buf.rename()<CR>", opts)
+keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+keymap("n", "<leader>rr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 
 --
 -- Plugins --
