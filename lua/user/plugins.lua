@@ -71,6 +71,8 @@ return packer.startup(function(use)
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
   use { "shaunsingh/oxocarbon.nvim", commit = "bb59d8689820a0b5f1cf9508ebc0d429b15348d1", run = "./install.sh"}
   use { "catppuccin/nvim", as = "catppuccin"}
+  use { "sainnhe/gruvbox-material", commit = "af9a1d60ca4d7e2ca34c55c46d1dbea0769d9244"}
+  use { "sainnhe/everforest", commit = "d855af543410c4047fc03798f5d58ddd07abcf2d" }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
