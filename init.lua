@@ -24,5 +24,6 @@ require "user.cloak"
 require "user.autotag"
 require "user.multicursor"
 require "user.aerial"
+require "user.rnvimr"
 
 require "neovide"

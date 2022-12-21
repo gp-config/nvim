@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use { "windwp/nvim-ts-autotag", commit = "fdefe46c6807441460f11f11a167a2baf8e4534b" } -- auto close and auto rename html tags (depends on treesitter)
   use { "mg979/vim-visual-multi", commit = "724bd53adfbaf32e129b001658b45d4c5c29ca1a" } -- multiple cursors (suck it, vim purists)
   use { "stevearc/aerial.nvim", commit = "086e1904e51fc559673598afbc59842db7981501" } -- code outline view
+  use { "kevinhwang91/rnvimr", commit = "64579c485812867bbd7890a55ca93884beb440b6" } -- file browsing (using ranger; relies on system ranger install)
 
   -- Movement
   use { "ggandor/leap.nvim", commit = "dda4ed60f90ae889f459887449a43c4de29609bd" }

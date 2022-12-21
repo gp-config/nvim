@@ -90,8 +90,9 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
-
 -- Aerial
 keymap("n", "<leader>a", "<cmd>AerialToggle left<cr>", opts) -- toggle symbols panel (aerial)
 keymap("n", "<leader>gs", ":Telescope aerial<cr>", opts) -- quick goto symbol using telescope
 
+-- Ranger
+keymap("n", "<leader><leader>", ":RnvimrToggle<cr>", opts)
