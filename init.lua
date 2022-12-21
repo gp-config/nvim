@@ -23,5 +23,6 @@ require "user.whichkey"
 require "user.cloak"
 require "user.autotag"
 require "user.multicursor"
+require "user.aerial"
 
 require "neovide"

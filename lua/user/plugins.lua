@@ -62,6 +62,7 @@ return packer.startup(function(use)
   use { "laytan/cloak.nvim", commit = "8ffb5ef8314a543b29e23efefd5388533974bcf6" }
   use { "windwp/nvim-ts-autotag", commit = "fdefe46c6807441460f11f11a167a2baf8e4534b" } -- auto close and auto rename html tags (depends on treesitter)
   use { "mg979/vim-visual-multi", commit = "724bd53adfbaf32e129b001658b45d4c5c29ca1a" } -- multiple cursors (suck it, vim purists)
+  use { "stevearc/aerial.nvim", commit = "086e1904e51fc559673598afbc59842db7981501" } -- code outline view
 
   -- Movement
   use { "ggandor/leap.nvim", commit = "dda4ed60f90ae889f459887449a43c4de29609bd" }
@@ -97,10 +98,7 @@ return packer.startup(function(use)
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
-  }
+  use { "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac" }
 
   -- Git
   use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }

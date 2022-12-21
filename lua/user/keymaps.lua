@@ -19,7 +19,7 @@ vim.g.mapleader = " "
 -- Better window navigation
 -- GP: window navigation
 keymap("n", "<leader>v", "<C-w>v")
-keymap("n", "<leader>sh", "<C-w>s")
+-- keymap("n", "<leader>sh", "<C-w>s") -- conflicts with aerial toggle
 keymap("n", "<leader>c", "<C-w>c")
 keymap("n", "<leader>w<Left>", "<C-w>h")
 keymap("n", "<leader>w<Down>", "<C-w>j")
@@ -59,7 +59,6 @@ keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 keymap("n", "<leader>rr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 
 
-
 --
 -- Plugins --
 --
@@ -91,4 +90,8 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
+
+-- Aerial
+keymap("n", "<leader>a", "<cmd>AerialToggle left<cr>", opts) -- toggle symbols panel (aerial)
+keymap("n", "<leader>gs", ":Telescope aerial<cr>", opts) -- quick goto symbol using telescope
 
