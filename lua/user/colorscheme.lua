@@ -11,14 +11,14 @@ vim.o.background = "dark"
 -- local colorscheme = "catppuccin-latte" -- light theme (default light)
 -- local colorscheme = "catppuccin-mocha" -- dark theme, darkest variant (default dark)
 -- local colorscheme = "catppuccin-macchiato" -- dark theme, medium variant
--- local colorscheme = "catppuccin-frappe" -- dark theme, lightest variant
+local colorscheme = "catppuccin-frappe" -- dark theme, lightest variant
 
 --
 -- TOKYONIGHT
 --
 -- local colorscheme = "tokyonight" -- base version, uses 'background' option to choose either 'day' or 'storm'
 -- local colorscheme = "tokyonight-day"
-local colorscheme = "tokyonight-night" -- dark theme, darkest variant
+-- local colorscheme = "tokyonight-night" -- dark theme, darkest variant
 -- local colorscheme = "tokyonight-storm" -- dark theme, medium variant (default dark)
 -- local colorscheme = "tokyonight-moon" -- dark theme, higher contrast variant
 

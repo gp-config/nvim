@@ -11,6 +11,7 @@ aerial.setup({
     default_direction = "prefer_left",
     placement = "window",
     highlight_on_hover = true,
+    preserve_equality = true,
   }
 })
 
