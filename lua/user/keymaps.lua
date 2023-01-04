@@ -58,7 +58,6 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 keymap("n", "<leader>rr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 
-
 --
 -- Plugins --
 --
@@ -96,3 +95,6 @@ keymap("n", "<leader>gs", ":Telescope aerial<cr>", opts) -- quick goto symbol us
 
 -- Ranger
 keymap("n", "<leader><leader>", ":RnvimrToggle<cr>", opts)
+
+-- No neck pain
+keymap("n", "<leader>nn", ":NoNeckPain<cr>", opts)

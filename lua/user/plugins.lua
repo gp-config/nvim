@@ -56,7 +56,8 @@ return packer.startup(function(use)
   use { "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" }
   use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
-
+  use { "shortcuts/no-neck-pain.nvim", commit = "8c3c951ab64972821d8338365bce946bc66f4ba5" }
+  
   -- Misc
   use { "folke/which-key.nvim", commit = "61553aeb3d5ca8c11eea8be6eadf478062982ac9" }
   use { "laytan/cloak.nvim", commit = "8ffb5ef8314a543b29e23efefd5388533974bcf6" }
