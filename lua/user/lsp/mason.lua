@@ -8,7 +8,7 @@ local servers = {
 	"jsonls",
 	"yamlls",
 	"rust_analyzer",
-  "elixirls"
+  "elixirls",
 }
 
 local settings = {
