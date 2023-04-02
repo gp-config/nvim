@@ -25,5 +25,6 @@ require "user.autotag"
 require "user.multicursor"
 require "user.aerial"
 require "user.rnvimr"
+require "user.noneckpain"
 
 require "neovide"

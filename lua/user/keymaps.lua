@@ -98,3 +98,11 @@ keymap("n", "<leader><leader>", ":RnvimrToggle<cr>", opts)
 
 -- No neck pain
 keymap("n", "<leader>nn", ":NoNeckPain<cr>", opts)
+
+-- Harpoon
+keymap("n", "<leader>h", "<cmd> lua require'harpoon.mark'.add_file()<cr>", opts)
+keymap("n", "<leader>hh", "<cmd> lua require'harpoon.ui'.toggle_quick_menu()<cr>", opts)
+keymap("n", "<leader>1", "<cmd> lua require'harpoon.ui'.nav_file(1)<cr>", opts)
+keymap("n", "<leader>2", "<cmd> lua require'harpoon.ui'.nav_file(2)<cr>", opts)
+keymap("n", "<leader>3", "<cmd> lua require'harpoon.ui'.nav_file(3)<cr>", opts)
+keymap("n", "<leader>4", "<cmd> lua require'harpoon.ui'.nav_file(4)<cr>", opts)

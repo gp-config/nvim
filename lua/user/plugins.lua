@@ -56,7 +56,7 @@ return packer.startup(function(use)
   use { "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" }
   use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
-  use { "shortcuts/no-neck-pain.nvim", commit = "8c3c951ab64972821d8338365bce946bc66f4ba5" }
+  use { "shortcuts/no-neck-pain.nvim", commit = "33db10e593edc7d720c0f5c0320899bd1dd014e1" }
   
   -- Misc
   use { "folke/which-key.nvim", commit = "61553aeb3d5ca8c11eea8be6eadf478062982ac9" }
@@ -68,6 +68,7 @@ return packer.startup(function(use)
 
   -- Movement
   use { "ggandor/leap.nvim", commit = "dda4ed60f90ae889f459887449a43c4de29609bd" }
+  use { "theprimeagen/harpoon", commit = "f7040fd0c44e7a4010369136547de5604b9c22a1" }
 
   -- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
