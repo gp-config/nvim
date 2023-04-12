@@ -37,7 +37,8 @@ keymap("n", "<leader>q", ":bnext<CR>", opts)
 keymap("n", "<leader>z", ":bprevious<CR>", opts)
 
 -- Clear highlights
-keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
+-- keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
+keymap("n", "<leader>x", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
 keymap("n", "<leader>c", "<cmd>Bdelete!<CR>", opts)
