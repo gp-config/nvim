@@ -10,7 +10,7 @@ vim.o.background = "dark"
 -- 
 -- local colorscheme = "catppuccin-latte" -- light theme (default light)
 -- local colorscheme = "catppuccin-mocha" -- dark theme, darkest variant (default dark)
-local colorscheme = "catppuccin-macchiato" -- dark theme, medium variant
+-- local colorscheme = "catppuccin-macchiato" -- dark theme, medium variant
 -- local colorscheme = "catppuccin-frappe" -- dark theme, lightest variant
 
 --
@@ -27,7 +27,7 @@ local colorscheme = "catppuccin-macchiato" -- dark theme, medium variant
 --
 -- local colorscheme = "oxocarbon" -- supports light/dark background option
 -- local colorscheme = "gruvbox-material" -- support light/dark background option
--- local colorscheme = "everforest" -- support light/dark background option
+local colorscheme = "everforest" -- support light/dark background option
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
