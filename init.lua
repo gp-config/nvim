@@ -3,11 +3,11 @@ require "user.keymaps"
 require "user.options"
 require "user.plugins"
 require "user.gui-clients"
+require "user.autocommands"
 --
 require "lsp" -- ./lua/lsp/init.lua
 --
 require "plugin.impatient"
-require "plugin.autocommands"
 require "plugin.cmp"
 require "plugin.telescope"
 require "plugin.gitsigns"
