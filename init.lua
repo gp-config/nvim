@@ -27,4 +27,7 @@ require "user.aerial"
 require "user.rnvimr"
 require "user.noneckpain"
 
+-- Fennel support
+require "user.hotpot"
+
 require "neovide"
