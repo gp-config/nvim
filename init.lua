@@ -1,4 +1,4 @@
-require "user.colorscheme"
+require "user.colorschemetheme"
 require "user.keymaps"
 require "user.options"
 require "user.plugins"
