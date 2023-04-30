@@ -2,8 +2,9 @@ require "user.colorschemetheme"
 require "user.keymaps"
 require "user.options"
 require "user.plugins"
-require "user.lsp"
 require "user.gui-clients"
+--
+require "lsp" -- ./lua/lsp/init.lua
 --
 require "plugin.impatient"
 require "plugin.autocommands"
