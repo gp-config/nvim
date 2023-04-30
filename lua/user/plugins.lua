@@ -77,7 +77,8 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin"}
   use { "sainnhe/gruvbox-material", commit = "af9a1d60ca4d7e2ca34c55c46d1dbea0769d9244"}
   use { "sainnhe/everforest", commit = "d855af543410c4047fc03798f5d58ddd07abcf2d" }
-  use { "https://github.com/savq/melange-nvim", commit = "f15922543dd70b360335effb61411c05c710b99c" }
+  use { "savq/melange-nvim", commit = "f15922543dd70b360335effb61411c05c710b99c" }
+  use { "gp-themes/oxographene.nvim" }
 
   -- inline color highlighting for hex codes, rgba, etc
   use { "norcalli/nvim-colorizer.lua", commit = "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6" }

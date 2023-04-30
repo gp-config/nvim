@@ -25,7 +25,12 @@ vim.o.background = "dark"
 --
 -- melange
 --
-local colorscheme = "melange"
+-- local colorscheme = "melange"
+
+--
+-- GP custom themes
+--
+local colorscheme = "oxographene"
 
 --
 -- MISC
