@@ -26,6 +26,7 @@ require "user.multicursor"
 require "user.aerial"
 require "user.rnvimr"
 require "user.noneckpain"
+require "user.nvim-colorizer"
 
 -- Fennel support
 require "user.hotpot"
