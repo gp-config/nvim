@@ -1,8 +1,8 @@
 -- use this font for all GUI clients
 vim.opt.guifont = "JetBrains Mono:h12"
 
+-- NEOVIDE GUI:
 -- https://neovide.dev/configuration.html
---
 -- neovide sets this variable on startup. if it's not set, then we're not running in neovide.
 if not vim.g.neovide then
   return
