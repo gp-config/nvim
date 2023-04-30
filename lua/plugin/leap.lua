@@ -5,9 +5,4 @@ end
 
 leap.add_default_mappings()
 
-local keymap = vim.keymap.set
-
-keymap("n", "<leader>/", "<Plug>(leap-forward-to)")
-keymap("n", "<leader>?", "<Plug>(leap-backward-to)")
-
 
