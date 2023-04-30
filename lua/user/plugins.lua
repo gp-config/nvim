@@ -77,6 +77,7 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin"}
   use { "sainnhe/gruvbox-material", commit = "af9a1d60ca4d7e2ca34c55c46d1dbea0769d9244"}
   use { "sainnhe/everforest", commit = "d855af543410c4047fc03798f5d58ddd07abcf2d" }
+  use { "https://github.com/savq/melange-nvim", commit = "f15922543dd70b360335effb61411c05c710b99c" }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin

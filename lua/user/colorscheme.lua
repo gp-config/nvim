@@ -23,11 +23,16 @@ vim.o.background = "dark"
 -- local colorscheme = "tokyonight-moon" -- dark theme, higher contrast variant
 
 --
+-- melange
+--
+local colorscheme = "melange"
+
+--
 -- MISC
 --
 -- local colorscheme = "oxocarbon" -- supports light/dark background option
 -- local colorscheme = "gruvbox-material" -- support light/dark background option
-local colorscheme = "everforest" -- support light/dark background option
+-- local colorscheme = "everforest" -- support light/dark background option
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
