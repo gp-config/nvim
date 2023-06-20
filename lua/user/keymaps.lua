@@ -130,5 +130,7 @@ keymap("n", "<leader>3", "<cmd> lua require'harpoon.ui'.nav_file(3)<cr>", opts)
 keymap("n", "<leader>4", "<cmd> lua require'harpoon.ui'.nav_file(4)<cr>", opts)
 
 -- Leap 
-keymap("n", "<leader>/", "<Plug>(leap-forward-to)")
-keymap("n", "<leader>?", "<Plug>(leap-backward-to)")
+-- keymap("n", "<leader>/", "<Plug>(leap-forward-to)")
+-- keymap("n", "<leader>?", "<Plug>(leap-backward-to)")
+keymap("n", "<leader>f", "<Plug>(leap-forward-to)")
+keymap("n", "<leader>F", "<Plug>(leap-backward-to)")
