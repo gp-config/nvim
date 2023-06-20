@@ -119,6 +119,9 @@ return packer.startup(function(use)
   -- Fennel support
   use { "rktjmp/hotpot.nvim", commit = "9fd5d6e341861c776ec9c69a2fc524deae67b541" }
 
+  -- Lua REPL for plugin dev
+  use { "bfredl/nvim-luadev", commit = "3ba0c02c378503739f1fdb95cff3ea2aad48db3e"}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
