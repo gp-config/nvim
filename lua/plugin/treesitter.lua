@@ -28,4 +28,14 @@ configs.setup({
 		enable_autocmd = false,
 	},
 
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      -- TODO:GP: how do we make this work in selection mode as well, to continue the selection outwards?
+      init_selection = "gnn", -- set to `false` to disable one of the mappings
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
 })
