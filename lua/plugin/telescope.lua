@@ -10,7 +10,7 @@ telescope.setup {
 
     prompt_prefix = " ",
     selection_caret = " ",
-    path_display = { "smart" },
+    -- path_display = { "smart" },
     file_ignore_patterns = { ".git/", "node_modules" },
 
     mappings = {
@@ -21,8 +21,14 @@ telescope.setup {
         ["<C-k>"] = actions.cycle_history_prev,
       },
     },
+
+    fzf = {
+      fuzzy = true,
+      case_mode = "smart_case",
+    }
   },
 }
 
 -- extensions 
-require('telescope').load_extension('aerial')
+telescope.load_extension('aerial')
+telescope.load_extension('fzf')
