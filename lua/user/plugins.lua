@@ -67,7 +67,9 @@ return packer.startup(function(use)
 
   -- Movement
   use { "ggandor/leap.nvim", commit = "dda4ed60f90ae889f459887449a43c4de29609bd" }
-  use { "theprimeagen/harpoon", commit = "f7040fd0c44e7a4010369136547de5604b9c22a1" }
+  use { "GeordieP/harpoon", commit = "332c674fc1bd0f38a002168d31fc1915db213074" }
+  -- use { "~/github/geordiep/harpoon/" }
+  -- use { "theprimeagen/harpoon", commit = "f2bd3fb552ab45735ad3225e9486612e6e8bfe24" }
 
   -- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
