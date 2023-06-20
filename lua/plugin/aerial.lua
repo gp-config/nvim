@@ -12,6 +12,11 @@ aerial.setup({
     placement = "window",
     highlight_on_hover = true,
     preserve_equality = true,
-  }
+  },
+
+  -- Determines how the aerial window decides which buffer to display symbols for
+  --   window - aerial window will display symbols for the buffer in the window from which it was opened
+  --   global - aerial window will display symbols for the current window
+  attach_mode = "global"
 })
 
