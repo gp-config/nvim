@@ -15,16 +15,37 @@ vim.g.mapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+--
 -- Normal --
--- Better window navigation
--- GP: window navigation
+-- window navigation
 keymap("n", "<leader>v", "<C-w>v")
--- keymap("n", "<leader>sh", "<C-w>s") -- conflicts with aerial toggle
+keymap("n", "<leader>sh", "<C-w>s") -- conflicts with aerial toggle
 keymap("n", "<leader>c", "<C-w>c")
 keymap("n", "<leader>w<Left>", "<C-w>h")
 keymap("n", "<leader>w<Down>", "<C-w>j")
 keymap("n", "<leader>w<Up>", "<C-w>k")
 keymap("n", "<leader>w<Right>", "<C-w>l")
+
+-- Movement and screen scrolling:
+-- Arrow keys (on my keyboard the arrows are on the home row, arranged similar to hjkl) to scroll buffer around middle 
+keymap("n", "<Up>", "kzz")
+keymap("n", "<Down>", "jzz")
+-- Use Shift+Arrow (or hjkl) to move like traditional vim - pressing shift makes this feel like a "precision mode"
+keymap("n", "<S-Up>", "k")
+keymap("n", "<S-Down>", "j")
+-- Jump to next empty line (the { and } keys) also should scroll
+keymap("n", "}", "}zz", {noremap = true})
+keymap("n", "{", "{zz", {noremap = true})
+-- Search jumping should also scroll
+keymap("n", "n", "nzz", {noremap = true})
+keymap("n", "N", "Nzz", {noremap = true})
+-- Apply the above rules to visual block mode too
+keymap("x", "<Up>", "kzz")
+keymap("x", "<Down>", "jzz")
+keymap("x", "<S-Up>", "k")
+keymap("x", "<S-Down>", "j")
+keymap("x", "}", "}zz", {noremap = true})
+keymap("x", "{", "{zz", {noremap = true})
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
