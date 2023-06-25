@@ -28,11 +28,11 @@ keymap("n", "<leader>w<Right>", "<C-w>l")
 
 -- Movement and screen scrolling:
 -- Arrow keys (on my keyboard the arrows are on the home row, arranged similar to hjkl) to scroll buffer around middle 
-keymap("n", "<Up>", "kzz")
-keymap("n", "<Down>", "jzz")
+-- keymap("n", "<Up>", "kzz")
+-- keymap("n", "<Down>", "jzz")
 -- Use Shift+Arrow (or hjkl) to move like traditional vim - pressing shift makes this feel like a "precision mode"
-keymap("n", "<S-Up>", "k")
-keymap("n", "<S-Down>", "j")
+-- keymap("n", "<S-Up>", "k")
+-- keymap("n", "<S-Down>", "j")
 -- Jump to next empty line (the { and } keys) also should scroll
 keymap("n", "}", "}zz", {noremap = true})
 keymap("n", "{", "{zz", {noremap = true})
@@ -40,10 +40,10 @@ keymap("n", "{", "{zz", {noremap = true})
 keymap("n", "n", "nzz", {noremap = true})
 keymap("n", "N", "Nzz", {noremap = true})
 -- Apply the above rules to visual block mode too
-keymap("x", "<Up>", "kzz")
-keymap("x", "<Down>", "jzz")
-keymap("x", "<S-Up>", "k")
-keymap("x", "<S-Down>", "j")
+-- keymap("x", "<Up>", "kzz")
+-- keymap("x", "<Down>", "jzz")
+-- keymap("x", "<S-Up>", "k")
+-- keymap("x", "<S-Down>", "j")
 keymap("x", "}", "}zz", {noremap = true})
 keymap("x", "{", "{zz", {noremap = true})
 
