@@ -18,7 +18,7 @@ vim.g.mapleader = " "
 --
 -- Normal --
 -- window navigation
-keymap("n", "<leader>v", "<C-w>v")
+keymap("n", "<leader>v", "<C-w>v<C-w>h")
 keymap("n", "<leader>sh", "<C-w>s") -- conflicts with aerial toggle
 keymap("n", "<leader>c", "<C-w>c")
 keymap("n", "<leader>w<Left>", "<C-w>h")
@@ -127,16 +127,16 @@ keymap("n", "<leader>h", "<cmd> lua require'harpoon.mark'.add_file()<cr>", opts)
 keymap("n", "<leader>hh", "<cmd> lua require'harpoon.ui'.toggle_quick_menu()<cr>", opts)
 -- keys 1,2,3,4 and their shift variants are to set and navigate to bookmarks
 -- 1!
--- keymap("n", "<leader>1", "<cmd> lua require'harpoon.ui'.nav_file(1)<cr>", opts)
+keymap("n", "<leader>1", "<cmd> lua require'harpoon.ui'.nav_file(1)<cr>", opts)
 -- keymap("n", "<leader>h1", "<cmd> lua require'harpoon.mark'.add_current_file(1)<cr>", opts)
 -- 2@
--- keymap("n", "<leader>2", "<cmd> lua require'harpoon.ui'.nav_file(2)<cr>", opts)
+keymap("n", "<leader>2", "<cmd> lua require'harpoon.ui'.nav_file(2)<cr>", opts)
 -- keymap("n", "<leader>h2", "<cmd> lua require'harpoon.mark'.add_current_file(2)<cr>", opts)
 -- 3#
--- keymap("n", "<leader>3", "<cmd> lua require'harpoon.ui'.nav_file(3)<cr>", opts)
+keymap("n", "<leader>3", "<cmd> lua require'harpoon.ui'.nav_file(3)<cr>", opts)
 -- keymap("n", "<leader>h3", "<cmd> lua require'harpoon.mark'.add_current_file(3)<cr>", opts)
 -- 4$
--- keymap("n", "<leader>4", "<cmd> lua require'harpoon.ui'.nav_file(4)<cr>", opts)
+keymap("n", "<leader>4", "<cmd> lua require'harpoon.ui'.nav_file(4)<cr>", opts)
 -- keymap("n", "<leader>h4", "<cmd> lua require'harpoon.mark'.add_current_file(4)<cr>", opts)
 
 -- Leap 
