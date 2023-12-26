@@ -64,7 +64,7 @@ function M.config()
 
     g = {
       name = "Git",
-      g = { "<cmd>Neogit<cr>", "Neogit" },
+      -- g = { "<cmd>TODO LAZYGIT<cr>", "TODO OPEN LAZYGIT" },
       j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
       k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
       l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -116,12 +116,9 @@ function M.config()
       e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
     },
 
+    -- TODO: maybe remove this tabs block entirely?
     t = {
       name = "Tab",
-      t = {
-        "<cmd>lua require('telescope').extensions['telescope-tabs'].list_tabs(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal', prompt_title='Tabs'})<cr>",
-        "Find Tab",
-      },
       a = { "<cmd>$tabnew<cr>", "New Empty Tab" },
       A = { "<cmd>tabnew %<cr>", "New Tab" },
       n = { "<cmd>tabn<cr>", "Next" },
