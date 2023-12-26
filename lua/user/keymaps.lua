@@ -100,6 +100,9 @@ keymap("n", "<leader>th", ":Telescope colorscheme<CR>", opts)
 -- keymap("n", "<leader>gb", "<cmd>:Gitsigns toggle_current_line_blame<CR>", opts)
 
 
+-- No Neck Pain
+-- Find NNP keybinds in `noneckpain.lua`
+
 -- Comment
 -- Leader keys to comment ? TODO: maybe remove
 -- keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
