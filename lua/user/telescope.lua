@@ -34,14 +34,15 @@ function M.config()
         "--hidden",
         "--glob=!.git/",
       },
+      file_ignore_patterns = { ".git/", "node_modules" },
 
       mappings = {
         i = {
-          ["<C-n>"] = actions.cycle_history_next,
-          ["<C-p>"] = actions.cycle_history_prev,
+          ["<C-j>"] = actions.cycle_history_next,
+          ["<C-k>"] = actions.cycle_history_prev,
 
-          ["<C-j>"] = actions.move_selection_next,
-          ["<C-k>"] = actions.move_selection_previous,
+          ["<Down>"] = actions.move_selection_next,
+          ["<Up>"] = actions.move_selection_previous,
         },
         n = {
           ["<esc>"] = actions.close,
