@@ -40,10 +40,10 @@ function M.config()
 
   require("lualine").setup {
     options = {
-      -- component_separators = { left = "", right = "" },
-      -- section_separators = { left = "", right = "" },
       component_separators = { left = "", right = "" },
-      section_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
+      -- component_separators = { left = "", right = "" },
+      -- section_separators = { left = "", right = "" },
 
       ignore_focus = { "NvimTree" },
     },
@@ -54,12 +54,13 @@ function M.config()
       -- lualine_x = { copilot },
       -- lualine_y = { "filetype" },
       -- lualine_z = { "progress" },
+      --
       lualine_a = { "mode" },
       lualine_b = { "branch" },
       lualine_c = { diff },
       lualine_x = { "diagnostics", copilot },
       lualine_y = { "filetype" },
-      lualine_z = { "progress" },
+      --
     },
     extensions = { "quickfix", "man", "fugitive" },
   }
