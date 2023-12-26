@@ -47,7 +47,6 @@ function M.config()
       b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
       c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
       f = { "<cmd>Telescope find_files<cr>", "Find files" },
-      p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
       t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
       s = { "<cmd>Telescope grep_string<cr>", "Find String" },
       h = { "<cmd>Telescope help_tags<cr>", "Help" },
@@ -63,7 +62,6 @@ function M.config()
 
     g = {
       name = "Git",
-      -- g = { "<cmd>TODO LAZYGIT<cr>", "TODO OPEN LAZYGIT // update keybind to `lg`" },
       j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
       k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
       l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },

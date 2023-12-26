@@ -88,7 +88,6 @@ vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
 
 -- Telescope
 -- Find additional telescope keybinds in `telescope.lua` under "mappings".
--- keymap("n", "<leader>gp", ":Telescope projects<CR>", opts) -- TODO: needs a project system to run off
 keymap("n", "<leader>rg", ":Telescope live_grep<CR>", opts) -- mnemonic: rg for 'ripgrep'
 keymap("n", "<leader>gf", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>b", ":Telescope buffers<CR>", opts)
