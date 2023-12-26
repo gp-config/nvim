@@ -33,11 +33,12 @@ vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "VimResized" }, {
-  callback = function()
-    vim.cmd "tabdo wincmd ="
-  end,
-})
+-- NOTE: testing if this autocmd is what messes up noneckpain layouts
+-- vim.api.nvim_create_autocmd({ "VimResized" }, {
+--   callback = function()
+--     vim.cmd "tabdo wincmd ="
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   pattern = { "*" },
