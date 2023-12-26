@@ -13,8 +13,8 @@ local M = {
   -- "sainnhe/gruvbox-material",
   -- "sainnhe/everforest",
   -- "savq/melange-nvim",
-  "gp-themes/oxographene.nvim",
-  -- "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" },
+  -- "gp-themes/oxographene.nvim",
+  "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" },
 
   --
   lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -28,10 +28,10 @@ function M.config()
   -- vim.o.background = "light"
 
   -- GP custom themes
-  local colorscheme = "oxographene"
-  -- local colorscheme = "zenbones"             -- supports light/dark
+  -- local colorscheme = "oxographene"
 
-  -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
+  -- local colorscheme = "zenbones"             -- supports light/dark
+  local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
   -- local colorscheme = "rosebones"            -- supports light/dark -- rosey colors, dark variant has blue bg
