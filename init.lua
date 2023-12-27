@@ -10,7 +10,7 @@ spec "user.mason"
 spec "user.schemastore"
 spec "user.lspconfig"
 spec "user.navic"
-spec "user.breadcrumbs"
+-- spec "user.breadcrumbs" -- disabled: switching to have navic context shown in the statusline
 spec "user.null-ls"
 spec "user.illuminate"
 spec "user.telescope"
