@@ -3,7 +3,7 @@ local M = {
   commit = "7533b0ead663d80452210c0c089e5105089697e5",
 }
 
-function custom_mode()
+local function custom_mode()
   -- Adapted from https://github.com/nvim-lualine/lualine.nvim/blob/master/lua/lualine/utils/mode.lua#L6
   local mode_code = vim.api.nvim_get_mode().mode
 
@@ -94,8 +94,8 @@ function M.config()
       --                
       -- --
       -- blocks
-      -- component_separators = { left = "", right = "" },
-      -- section_separators = { left = "", right = "" },
+      component_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
 
       -- arrows
       -- component_separators = { left = '', right = ''},
@@ -114,8 +114,8 @@ function M.config()
       -- section_separators = { left = "", right = "" },
 
       -- combined slants
-      component_separators = { left = "", right = "" },
-      section_separators = { left = "", right = "" },
+      -- component_separators = { left = "", right = "" },
+      -- section_separators = { left = "", right = "" },
 
       ignore_focus = { "NvimTree" },
     },
@@ -137,11 +137,19 @@ function M.config()
       -- lualine_z = { "location" },
       --
       lualine_a = { custom_mode },
-      lualine_b = { "location" },
-      lualine_c = { },
-      lualine_x = { diff },
-      lualine_y = { "diagnostics", copilot },
-      lualine_z = { "filetype" },
+      lualine_b = {
+        {
+          "navic",
+          -- below: trying to get colored icons rendering, but it's not working.
+          --        they aren't colored in the breadcrumbs bar either, so maybe it's colorscheme related.
+          -- color_correction = "static",
+          -- navic_opts = { highlight = true },
+        }
+      },
+      lualine_c = {},
+      lualine_x = { copilot, "diagnostics", diff },
+      lualine_y = { "filetype" },
+      lualine_z = { "location" },
     },
     extensions = { "quickfix", "man", "fugitive" },
   }
