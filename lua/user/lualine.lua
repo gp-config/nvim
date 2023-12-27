@@ -39,9 +39,21 @@ function M.config()
   end
 
   require("lualine").setup {
+
     options = {
+      -- blocks
       component_separators = { left = "", right = "" },
       section_separators = { left = "", right = "" },
+
+      -- arrows
+      -- component_separators = { left = '', right = ''},
+      -- section_separators = { left = '', right = ''},
+
+      -- rounded blocks
+      -- section_separators = { left = '', right = '' },
+      -- component_separators = { left = '', right = '' },
+
+      -- slants
       -- component_separators = { left = "", right = "" },
       -- section_separators = { left = "", right = "" },
 
