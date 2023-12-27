@@ -1,7 +1,7 @@
 -- use this font for all GUI clients
 -- vim.opt.guifont = "JetBrains Mono:h11"
 vim.opt.guifont = "Berkeley Mono:h11"
--- vim.opt.linespace = 6
+vim.opt.linespace = 4
 
 
 -- NEOVIDE GUI:
@@ -16,7 +16,7 @@ else
   vim.g.neovide_refresh_rate = 120 -- only has an effect on high refresh displays.
   vim.g.neovide_refresh_rate_idle = 5
 
-  vim.g.neovide_cursor_animation_length = 0.05 -- default 0.13
+  vim.g.neovide_cursor_animation_length = 0.08 -- default 0.13
   vim.g.neovide_cursor_trail_size = 0.5 -- default 0.8
 
   vim.g.neovide_window_floating_opacity = 1
