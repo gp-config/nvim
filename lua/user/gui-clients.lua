@@ -1,7 +1,7 @@
 -- use this font for all GUI clients
 -- vim.opt.guifont = "JetBrains Mono:h11"
 vim.opt.guifont = "Berkeley Mono:h11"
--- vim.opt.linespace = 4
+vim.opt.linespace = 5
 
 
 -- NEOVIDE GUI:
