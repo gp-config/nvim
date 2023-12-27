@@ -28,11 +28,11 @@ function M.config()
   -- vim.o.background = "light"
 
   -- GP custom themes
-  -- local colorscheme = "oxographene"
+  local colorscheme = "oxographene"
 
   -- local colorscheme = "zenbones"             -- supports light/dark
-  local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
-  -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
+  -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
+  local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
   -- local colorscheme = "rosebones"            -- supports light/dark -- rosey colors, dark variant has blue bg
   -- local colorscheme = "vimbones"             -- supports light      -- bright green, it's ok
