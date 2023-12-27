@@ -13,6 +13,8 @@ else
   vim.opt.clipboard = "" -- disables ext clipboard. tracking bug https://github.com/neovide/neovide/issues/2003
 
   vim.g.neovide_cursor_vfx_mode = "pixiedust"
+  vim.g.neovide_cursor_vfx_particle_density = 12.0 -- default 7.0
+
   vim.g.neovide_refresh_rate = 120 -- only has an effect on high refresh displays.
   vim.g.neovide_refresh_rate_idle = 5
 
