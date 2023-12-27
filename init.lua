@@ -8,6 +8,7 @@ spec "user.devicons"
 spec "user.treesitter"
 spec "user.mason"
 spec "user.schemastore"
+spec "user.navbuddy"
 spec "user.lspconfig"
 spec "user.navic"
 -- spec "user.breadcrumbs" -- disabled: switching to have navic context shown in the statusline
