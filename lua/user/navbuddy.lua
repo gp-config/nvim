@@ -13,6 +13,26 @@ local M = {
     navbuddy.setup({
       lsp = { auto_attach = true },
       use_default_mappings = true,
+      window = {
+        size = "90%",
+        sections = {
+          left = {
+            size = "20%",
+            border = nil, -- You can set border style for each section individually as well.
+          },
+          mid = {
+            size = "50%",
+            border = nil,
+          },
+          right = {
+            -- No size option for right most section. It fills to
+            -- remaining area.
+            border = nil,
+            preview = "leaf",  -- Right section can show previews too.
+            -- Options: "leaf", "always" or "never"
+          }
+        },
+      },
       mappings = {
         ["<Down>"] = actions.next_sibling(),
         ["<Up>"] = actions.previous_sibling(),
