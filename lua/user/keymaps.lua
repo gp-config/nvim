@@ -102,9 +102,6 @@ keymap("n", "<leader>gb", "<cmd>:Gitsigns toggle_current_line_blame<CR>", opts)
 -- Find NNP keybinds in `noneckpain.lua`
 
 -- Comment
--- Leader keys to comment ? TODO: maybe remove
--- keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
--- keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 -- DAP
 -- Find additional DAP keybinds in `dapui.lua`
