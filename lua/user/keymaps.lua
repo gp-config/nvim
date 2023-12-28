@@ -64,8 +64,9 @@ keymap("n", "<leader>z", ":bprevious<CR>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Clear highlights
-keymap("n", "<leader>x", "<cmd>nohlsearch<CR>", opts)
+-- Toggle search highlighting on/off
+vim.cmd[[:nnoremap <silent><expr> <Leader>x (&hls && v:hlsearch ? ':set nohls' : ':set hls')."\n"]]
+
 
 -- Paste-and-replace without yanking in visual & visual block mode
 keymap("x", "p", [["_dP]])
