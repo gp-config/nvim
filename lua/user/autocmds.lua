@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
   end,
 })
 
--- NOTE: testing if this autocmd is what messes up noneckpain layouts
+-- NOTE: this command somewhat breaks NoNeckPain layouts; sometimes the window sizing will reset to very small width.
 -- vim.api.nvim_create_autocmd({ "VimResized" }, {
 --   callback = function()
 --     vim.cmd "tabdo wincmd ="

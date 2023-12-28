@@ -64,8 +64,9 @@ keymap("n", "<leader>z", ":bprevious<CR>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Clear highlights
-keymap("n", "<leader>x", "<cmd>nohlsearch<CR>", opts)
+-- Toggle search highlighting on/off
+vim.cmd[[:nnoremap <silent><expr> <Leader>x (&hls && v:hlsearch ? ':set nohls' : ':set hls')."\n"]]
+
 
 -- Paste-and-replace without yanking in visual & visual block mode
 keymap("x", "p", [["_dP]])
@@ -94,7 +95,6 @@ keymap("n", "<leader>b", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>th", ":Telescope colorscheme<CR>", opts)
 
 -- Git
--- TODO: plugin setup
 keymap("n", "lg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts) -- calls a function defined in toggleterm.lua
 keymap("n", "<leader>gb", "<cmd>:Gitsigns toggle_current_line_blame<CR>", opts)
 
@@ -103,9 +103,6 @@ keymap("n", "<leader>gb", "<cmd>:Gitsigns toggle_current_line_blame<CR>", opts)
 -- Find NNP keybinds in `noneckpain.lua`
 
 -- Comment
--- Leader keys to comment ? TODO: maybe remove
--- keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
--- keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 -- DAP
 -- Find additional DAP keybinds in `dapui.lua`
@@ -119,15 +116,8 @@ keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
--- Aerial
--- TODO: plugin setup
--- TODO: maybe remove?
--- keymap("n", "<leader>a", "<cmd>AerialToggle left<cr>", opts) -- toggle symbols panel (aerial)
--- keymap("n", "<leader>gs", ":Telescope aerial<cr>", opts) -- quick goto symbol using telescope
-
--- Ranger
--- TODO: plugin setup
--- keymap("n", "<leader><leader>", ":RnvimrToggle<cr>", opts)
+-- Navbuddy
+keymap("n", "<leader>a", "<cmd>Navbuddy<cr>", opts) -- toggle symbols panel (aerial)
 
 -- Harpoon
 -- TODO: plugin setup
