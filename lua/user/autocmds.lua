@@ -33,11 +33,12 @@ vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "VimResized" }, {
-  callback = function()
-    vim.cmd "tabdo wincmd ="
-  end,
-})
+-- NOTE: this command somewhat breaks NoNeckPain layouts; sometimes the window sizing will reset to very small width.
+-- vim.api.nvim_create_autocmd({ "VimResized" }, {
+--   callback = function()
+--     vim.cmd "tabdo wincmd ="
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   pattern = { "*" },
@@ -58,4 +59,10 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
   end,
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  callback = function()
+    vim.lsp.buf.format()
+  end
 })
