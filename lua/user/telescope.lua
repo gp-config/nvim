@@ -118,6 +118,29 @@ function M.config()
       },
     },
   }
+
+  --- telescope global search for highlighted text
+  --- thanks to: adoyle-h on github https://github.com/nvim-telescope/telescope.nvim/issues/1923#issuecomment-1122642431
+
+  function vim.getVisualSelection()
+    vim.cmd('noau normal! "vy"')
+    local text = vim.fn.getreg('v')
+    vim.fn.setreg('v', {})
+
+    text = string.gsub(text, "\n", "")
+    if #text > 0 then
+      return text
+    else
+      return ''
+    end
+  end
+
+  vim.keymap.set('v', '<space>g', function()
+    local text = vim.getVisualSelection()
+    require('telescope.builtin').live_grep({ default_text = text })
+  end, { noremap = true, silent = true })
+
+  --- end telescope global search for highlighted text
 end
 
 return M
