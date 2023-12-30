@@ -27,6 +27,7 @@ keymap("n", "<leader>w<Left>", "<C-w>h")
 keymap("n", "<leader>w<Down>", "<C-w>j")
 keymap("n", "<leader>w<Up>", "<C-w>k")
 keymap("n", "<leader>w<Right>", "<C-w>l")
+keymap("n", "=", ":wincmd =<CR>")
 
 -- Resize windows with arrow keys
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
