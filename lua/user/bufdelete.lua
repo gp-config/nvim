@@ -7,7 +7,7 @@ local M = {
 function M.config()
   local keymap = vim.keymap.set
   local opts = { noremap = true, silent = true }
-  keymap("n", "<leader>c", ":lua require('bufdelete').bufdelete(0, false)<cr>", opts)
+  keymap("n", "<leader>bd", ":lua require('bufdelete').bufdelete(0, false)<cr>", opts)
 end
 
 return M
