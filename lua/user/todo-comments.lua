@@ -1,3 +1,32 @@
+
+-- This plugin will highlight the following comments:
+--
+-- default keywords:
+-- FIX: comments
+-- FIXME: comments
+-- BUG: comments
+-- FIXIT: comments
+-- ISSUE: comments
+-- TODO: comments
+-- HACK: comments
+-- WARN: comments
+-- WARNING: comments
+-- XXX: comments
+-- PERF: comments
+-- PERFORMANCE: comments
+-- OPTIM: comments
+-- OPTIMIZE: comments
+-- NOTE: comments
+-- INFO: comments
+-- TEST: comments
+-- TESTING: comments
+-- PASSED: comments
+-- FAILED: comments
+-- 
+-- custom:
+-- THEME: for nice formatting of theme descriptions in `user.colorscheme`
+
+
 local M = {
   "folke/todo-comments.nvim",
   lazy = false,
@@ -18,16 +47,18 @@ local M = {
       PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
       NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
       TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-    }
+      THEME = { icon = " ", color = "info" },
+    },
+    colors = {
+      error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+      warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
+      info = { "DiagnosticInfo", "#2563EB" },
+      hint = { "DiagnosticHint", "#10B981" },
+      default = { "Identifier", "#7C3AED" },
+      test = { "Identifier", "#FF00FF" },
+    },
   }
 }
 
 return M
 
--- FIX: Testing
--- TODO: Testing
--- HACK: Testing
--- WARN: Testing
--- PERF: Testing
--- NOTE: Testing
--- TEST: Testing
