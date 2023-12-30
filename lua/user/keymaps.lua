@@ -20,9 +20,9 @@ keymap("n", "<C-i>", "<C-i>", opts)
 
 -- window navigation
 -- keymap("n", "<leader>v", "<C-w>v<C-w>h") -- vertical window split
-keymap("n", "<leader>v", ":50 vsplit <CR><C-w>h") -- vertical window split
+keymap("n", "<leader>v", ":50 vsplit <CR><C-w>h", { silent = true }) -- vertical window split
 keymap("n", "<leader>sh", "<C-w>s") -- horizontal window split
-keymap("n", "<leader>c", ":close<CR>")
+keymap("n", "<leader>c", ":close<CR>", { silent = true })
 keymap("n", "<leader>w<Left>", "<C-w>h")
 keymap("n", "<leader>w<Down>", "<C-w>j")
 keymap("n", "<leader>w<Up>", "<C-w>k")
