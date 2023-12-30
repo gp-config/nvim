@@ -7,11 +7,11 @@ local M = {
   -- Uncomment to pick one
   --
   -- "gp-themes/oxographene.nvim",
-  -- "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" },
+  "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" },
   -- "catppuccin/nvim",
   -- "folke/tokyonight.nvim",
   -- "sainnhe/gruvbox-material",
-  "savq/melange-nvim",
+  -- "savq/melange-nvim",
   -- "shaunsingh/oxocarbon.nvim",
   -- "sainnhe/everforest",
   -- "lunarvim/darkplus.nvim",
@@ -42,7 +42,7 @@ function M.config()
   -- a set of minimal, low-color themes with high text contrast.
   -- lots of good, high-focus light and dark options.
   -- 
-  -- local colorscheme = "zenbones"             -- supports light/dark --
+  local colorscheme = "zenbones"             -- supports light/dark --
   -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
@@ -83,7 +83,7 @@ function M.config()
   -- melange by savq
   -- rustic with pastel colors. similar to gruvbox.
   --
-  local colorscheme = "melange"              -- supports light/dark
+  -- local colorscheme = "melange"              -- supports light/dark
 
   -- THEME:
   -- everforest sainnhe
