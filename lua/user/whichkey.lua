@@ -114,14 +114,15 @@ function M.config()
 
     -- TODO: maybe remove this tabs block entirely?
     t = {
-      name = "Tab",
-      a = { "<cmd>$tabnew<cr>", "New Empty Tab" },
-      A = { "<cmd>tabnew %<cr>", "New Tab" },
-      n = { "<cmd>tabn<cr>", "Next" },
-      o = { "<cmd>tabonly<cr>", "Only" },
-      p = { "<cmd>tabp<cr>", "Prev" },
-      h = { "<cmd>-tabmove<cr>", "Move Left" },
-      l = { "<cmd>+tabmove<cr>", "Move Right" },
+      name = "Toggle",
+      t = { "<cmd>Twilight<cr>", "Toggle Twilight (code lowlighting / focus mode)" },
+      -- a = { "<cmd>$tabnew<cr>", "New Empty Tab" },
+      -- A = { "<cmd>tabnew %<cr>", "New Tab" },
+      -- n = { "<cmd>tabn<cr>", "Next" },
+      -- o = { "<cmd>tabonly<cr>", "Only" },
+      -- p = { "<cmd>tabp<cr>", "Prev" },
+      -- h = { "<cmd>-tabmove<cr>", "Move Left" },
+      -- l = { "<cmd>+tabmove<cr>", "Move Right" },
     },
 
     T = {
