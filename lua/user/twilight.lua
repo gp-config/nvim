@@ -23,8 +23,8 @@ local M = {
 }
 
 function M.config()
-  -- Enable by default
-  vim.cmd("TwilightEnable")
+  -- Enable by default:           (uncomment line below)
+  -- vim.cmd("TwilightEnable")
 end
 
 return M
