@@ -91,10 +91,8 @@ vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
 
 -- Telescope
 -- Find additional telescope keybinds in `telescope.lua` under "mappings".
-keymap("n", "<leader>rg", ":Telescope live_grep<CR>", opts) -- mnemonic: rg for 'ripgrep'
-keymap("n", "<leader>gf", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>b", ":Telescope buffers<CR>", opts)
-keymap("n", "<leader>th", ":Telescope colorscheme<CR>", opts)
+keymap("n", "<leader>rg", ":Telescope live_grep<CR>", opts) -- live_grep also bound to a different combination in whichkey.lua
+keymap("n", "<leader>gf", ":Telescope find_files<CR>", opts)-- find_files also bound to a different combination in whichkey.lua
 
 -- Git
 keymap("n", "lg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts) -- calls a function defined in toggleterm.lua

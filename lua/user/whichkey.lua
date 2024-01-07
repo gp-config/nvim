@@ -8,10 +8,10 @@ function M.config()
   local mappings = {
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment" },
     -- ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-    b = {
-      name = "Buffers",
-      b = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
-    },
+    -- b = {
+    --   name = "Buffers",
+    --   b = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
+    -- },
     d = {
       name = "Debug",
       t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
@@ -43,20 +43,21 @@ function M.config()
 
     f = {
       name = "Find",
-      b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+      b = { "<cmd>Telescope buffers<CR>", "Buffers" },
       c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
       f = { "<cmd>Telescope find_files<cr>", "Find files" },
       t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-      s = { "<cmd>Telescope grep_string<cr>", "Find String" },
+      -- s = { "<cmd>Telescope grep_string<cr>", "Find String" }, -- not sure how this one is supposed to work
       h = { "<cmd>Telescope help_tags<cr>", "Help" },
       H = { "<cmd>Telescope highlights<cr>", "Highlights" },
-      i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
+      -- i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" }, -- requires installation of an extension to work
       l = { "<cmd>Telescope resume<cr>", "Last Search" },
       M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
       r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
       R = { "<cmd>Telescope registers<cr>", "Registers" },
       k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
       C = { "<cmd>Telescope commands<cr>", "Commands" },
+      p = { "<cmd>Telescope planets<cr>", "Look through the Telescope :)" },
     },
 
     g = {
