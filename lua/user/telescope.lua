@@ -53,22 +53,23 @@ function M.config()
       },
     },
     pickers = {
+      -- Themes docs: https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#themes
       live_grep = {
-        theme = "dropdown",
+        theme = "ivy",
       },
 
       grep_string = {
-        theme = "dropdown",
+        theme = "ivy",
       },
 
       find_files = {
-        theme = "dropdown",
+        theme = "ivy",
         previewer = false,
       },
 
       buffers = {
-        theme = "dropdown",
-        previewer = false,
+        theme = "ivy",
+        -- previewer = false,
         initial_mode = "normal",
         mappings = {
           i = {
