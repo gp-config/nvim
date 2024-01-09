@@ -11,6 +11,7 @@ spec "user.mason"
 spec "user.schemastore"
 spec "user.navbuddy"
 spec "user.lspconfig"
+spec "user.dap"
 spec "user.navic"
 -- spec "user.breadcrumbs" -- disabled: switching to have navic context shown in the statusline
 spec "user.null-ls"
