@@ -34,3 +34,12 @@ Each of those plugin modules represents a table of `lazy.nvim` options.
 
 Sometimes those plugin modules also have a `setup` method associated with them, which is run automatically by `lazy.nvim`.
 
+
+---
+
+# TODO
+
+- [ ] install that plugin which lets you set a specific color scheme per language
+- [ ] set default theme for `.lua` files to `lunaperche`
+    - it's installed by default in vim and looks pretty good for lua
+    - makes a good theme for nvim config editing
