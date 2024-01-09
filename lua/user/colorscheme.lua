@@ -7,10 +7,10 @@ local M = {
   -- Uncomment to pick one
   --
   -- "gp-themes/oxographene.nvim",
-  -- "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" },
+  "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" },
   -- "catppuccin/nvim",
   -- "folke/tokyonight.nvim",
-  "sainnhe/gruvbox-material",
+  -- "sainnhe/gruvbox-material",
   -- "savq/melange-nvim",
   -- "shaunsingh/oxocarbon.nvim",
   -- "sainnhe/everforest",
@@ -45,7 +45,7 @@ function M.config()
   -- local colorscheme = "zenbones"             -- supports light/dark --
   -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
-  -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
+  local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
   -- local colorscheme = "rosebones"            -- supports light/dark -- rosey colors, dark variant has blue bg
   -- local colorscheme = "vimbones"             -- supports light      -- bright green, it's ok
   -- local colorscheme = "neobones"             -- supports light/dark -- nice -- light is minty, dark is a deep sea blue
@@ -77,7 +77,7 @@ function M.config()
   -- gruvbox material by sainnhe
   -- rustic with vibrant, earthy colors.
   --
-  local colorscheme = "gruvbox-material"     -- supports light/dark
+  -- local colorscheme = "gruvbox-material"     -- supports light/dark
 
   -- THEME:
   -- melange by savq
