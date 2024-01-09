@@ -12,6 +12,7 @@ function M.config()
   }
 
   dap_install.config("python", {})
+  dap_install.config("codelldb", {})
 end
 
 return M
