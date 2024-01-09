@@ -5,13 +5,15 @@ local M = {
 }
 
 function M.config()
-  require("no-neck-pain").setup({
-    width = 160
-  })
+  require("no-neck-pain").setup {
+    width = 160,
+  }
 
   local keymap = vim.keymap.set
   local opts = { noremap = true, silent = true }
   keymap("n", "<leader>nn", ":NoNeckPain<cr>", opts)
+
+  vim.cmd "NoNeckPain"
 end
 
 return M
