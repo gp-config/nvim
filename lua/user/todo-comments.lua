@@ -47,11 +47,11 @@ local M = {
       HACK = { icon = " ", color = "warning" },
       WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
       PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-      NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+      NOTE = { icon = " ", color = "hint" },
       TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
       -- custom:
       THEME = { icon = " ", color = "info" },
-      INFO = { icon = " ", color = "info", alt = { "WARNING", "XXX" } },
+      DESC = { icon = " ", color = "info", alt = { "INFO" } },
     },
     colors = {
       error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
@@ -61,8 +61,7 @@ local M = {
       default = { "Identifier", "#7C3AED" },
       test = { "Identifier", "#FF00FF" },
     },
-  }
+  },
 }
 
 return M
-
