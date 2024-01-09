@@ -25,6 +25,8 @@
 -- 
 -- custom:
 -- THEME: for nice formatting of theme descriptions in `user.colorscheme`
+-- DESC: for 'description' comments in code files ; inline comments that explain a small section of code within a function
+--       - alternative to INFO
 
 
 local M = {
@@ -47,7 +49,9 @@ local M = {
       PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
       NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
       TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+      -- custom:
       THEME = { icon = " ", color = "info" },
+      INFO = { icon = " ", color = "info", alt = { "WARNING", "XXX" } },
     },
     colors = {
       error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
