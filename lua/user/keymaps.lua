@@ -37,22 +37,50 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Movement and screen scrolling:
 -- Arrow keys (on my keyboard the arrows are on the home row, arranged similar to hjkl) to scroll buffer around middle
-    -- keymap("n", "<Up>", "kzz")
-    -- keymap("n", "<Down>", "jzz")
+-- keymap("n", "<Up>", "kzz")
+-- keymap("n", "<Down>", "jzz")
 -- Use Shift+Arrow (or hjkl) to move like traditional vim - pressing shift makes this feel like a "precision mode"
-    -- keymap("n", "<S-Up>", "k")
-    -- keymap("n", "<S-Down>", "j")
+-- keymap("n", "<S-Up>", "k")
+-- keymap("n", "<S-Down>", "j")
 -- Apply the above rules to visual block mode too:
-    -- keymap("x", "<Up>", "kzz")
-    -- keymap("x", "<Down>", "jzz")
-    -- keymap("x", "<S-Up>", "k")
-    -- keymap("x", "<S-Down>", "j")
--- Jump to next empty line (the { and } keys) also should scroll
-keymap("n", "}", "}zz", {noremap = true})
-keymap("n", "{", "{zz", {noremap = true})
+-- keymap("x", "<Up>", "kzz")
+-- keymap("x", "<Down>", "jzz")
+-- keymap("x", "<S-Up>", "k")
+-- keymap("x", "<S-Down>", "j")
+
+-- NOTE: deprecated :: trying to discourage use of these keys for naviagion!
+--       Jump to next empty line (the { and } keys) also should scroll
+--       keymap("n", "}", "}zz", { noremap = true })
+--       keymap("n", "{", "{zz", { noremap = true })
+--
+--       unmap those buttons:
+keymap("n", "}", "")
+keymap("n", "{", "")
+
+-- NOTE: favor movement style:
+--       pageup & pagedown:
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
+
+--       Initially set pageup & pagedown size (% of screen):
+--        NOTE: doesn't work
+-- vim.cmd [[:let key = nvim_replace_termcodes("1<C-u>", v:true, v:false, v:true)]]
+-- vim.cmd [[:call nvim_feedkeys(key, 'n', v:false)]]
+
+-- NOTE: favor movement style:
+--       jump to next pair of braces
+--        NOTE: these don't work too well in elixir.
+--              maybe replace with: https://github.com/nvim-treesitter/nvim-treesitter-textobjects?tab=readme-ov-file#text-objects-move
+keymap("n", "]]", "]]zz", { noremap = true })
+keymap("n", "[[", "[[zz", { noremap = true })
+keymap("n", "]m", "]mzz", { noremap = true })
+keymap("n", "[m", "[mzz", { noremap = true })
+keymap("n", "]M", "]Mzz", { noremap = true })
+keymap("n", "[M", "[Mzz", { noremap = true })
+
 -- Search jumping should also scroll
-keymap("n", "n", "nzz", {noremap = true})
-keymap("n", "N", "Nzz", {noremap = true})
+keymap("n", "n", "nzz", { noremap = true })
+keymap("n", "N", "Nzz", { noremap = true })
 keymap("n", "*", "*zz", opts)
 keymap("n", "#", "#zz", opts)
 keymap("n", "g*", "g*zz", opts)
@@ -67,8 +95,7 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Toggle search highlighting on/off
-vim.cmd[[:nnoremap <silent><expr> <Leader>x (&hls && v:hlsearch ? ':set nohls' : ':set hls')."\n"]]
-
+vim.cmd [[:nnoremap <silent><expr> <Leader>x (&hls && v:hlsearch ? ':set nohls' : ':set hls')."\n"]]
 
 -- Paste-and-replace without yanking in visual & visual block mode
 keymap("x", "p", [["_dP]])
@@ -84,7 +111,6 @@ vim.cmd [[:amenu 10.110 mousemenu.References <cmd>lua vim.lsp.buf.references()<C
 vim.keymap.set("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
 vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
 
-
 --
 -- PLUGINS -- -- --
 --
@@ -92,12 +118,11 @@ vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
 -- Telescope
 -- Find additional telescope keybinds in `telescope.lua` under "mappings".
 keymap("n", "<leader>rg", ":Telescope live_grep<CR>", opts) -- live_grep also bound to a different combination in whichkey.lua
-keymap("n", "<leader>gf", ":Telescope find_files<CR>", opts)-- find_files also bound to a different combination in whichkey.lua
+keymap("n", "<leader>gf", ":Telescope find_files<CR>", opts) -- find_files also bound to a different combination in whichkey.lua
 
 -- Git
 keymap("n", "lg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts) -- calls a function defined in toggleterm.lua
 keymap("n", "<leader>gb", "<cmd>:Gitsigns toggle_current_line_blame<CR>", opts)
-
 
 -- No Neck Pain
 -- Find NNP keybinds in `noneckpain.lua`
@@ -122,18 +147,18 @@ keymap("n", "<leader>a", "<cmd>Navbuddy<cr>", opts) -- toggle symbols panel (aer
 -- Harpoon
 -- TODO: plugin setup
 -- h key shows the marks edit window
-    -- keymap("n", "<leader>h", "<cmd> lua require'harpoon.mark'.add_file()<cr>", opts)
-    -- keymap("n", "<leader>hh", "<cmd> lua require'harpoon.ui'.toggle_quick_menu()<cr>", opts)
+-- keymap("n", "<leader>h", "<cmd> lua require'harpoon.mark'.add_file()<cr>", opts)
+-- keymap("n", "<leader>hh", "<cmd> lua require'harpoon.ui'.toggle_quick_menu()<cr>", opts)
 -- keys 1,2,3,4 and their shift variants are to set and navigate to bookmarks
 -- 1!
-    -- keymap("n", "<leader>1", "<cmd> lua require'harpoon.ui'.nav_file(1)<cr>", opts)
-    -- keymap("n", "<leader>h1", "<cmd> lua require'harpoon.mark'.add_current_file(1)<cr>", opts)
+-- keymap("n", "<leader>1", "<cmd> lua require'harpoon.ui'.nav_file(1)<cr>", opts)
+-- keymap("n", "<leader>h1", "<cmd> lua require'harpoon.mark'.add_current_file(1)<cr>", opts)
 -- 2@
-    -- keymap("n", "<leader>2", "<cmd> lua require'harpoon.ui'.nav_file(2)<cr>", opts)
-    -- keymap("n", "<leader>h2", "<cmd> lua require'harpoon.mark'.add_current_file(2)<cr>", opts)
+-- keymap("n", "<leader>2", "<cmd> lua require'harpoon.ui'.nav_file(2)<cr>", opts)
+-- keymap("n", "<leader>h2", "<cmd> lua require'harpoon.mark'.add_current_file(2)<cr>", opts)
 -- 3#
-    -- keymap("n", "<leader>3", "<cmd> lua require'harpoon.ui'.nav_file(3)<cr>", opts)
-    -- keymap("n", "<leader>h3", "<cmd> lua require'harpoon.mark'.add_current_file(3)<cr>", opts)
+-- keymap("n", "<leader>3", "<cmd> lua require'harpoon.ui'.nav_file(3)<cr>", opts)
+-- keymap("n", "<leader>h3", "<cmd> lua require'harpoon.mark'.add_current_file(3)<cr>", opts)
 -- 4$
-    -- keymap("n", "<leader>4", "<cmd> lua require'harpoon.ui'.nav_file(4)<cr>", opts)
-    -- keymap("n", "<leader>h4", "<cmd> lua require'harpoon.mark'.add_current_file(4)<cr>", opts)
+-- keymap("n", "<leader>4", "<cmd> lua require'harpoon.ui'.nav_file(4)<cr>", opts)
+-- keymap("n", "<leader>h4", "<cmd> lua require'harpoon.mark'.add_current_file(4)<cr>", opts)
