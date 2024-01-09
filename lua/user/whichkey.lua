@@ -12,6 +12,10 @@ function M.config()
     --   name = "Buffers",
     --   b = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
     -- },
+    i = {
+      t = { "<cmd>:InspectTree<cr>", "Inspect TreeSitter Tree" },
+      i = { "<cmd>:Inspect<cr>", "Inspect symbol under cursor" },
+    },
     d = {
       name = "Debug",
       t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
