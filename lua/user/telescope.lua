@@ -84,6 +84,9 @@ function M.config()
       oldfiles = {
         theme = "ivy",
         initial_mode = "normal",
+        -- theme = "dropdown",
+        -- previewer = false,
+        --
       },
 
       planets = {
@@ -114,6 +117,10 @@ function M.config()
       lsp_implementations = {
         theme = "dropdown",
         initial_mode = "normal",
+      },
+
+      lsp_document_symbols = {
+        theme = "ivy",
       },
     },
     extensions = {
