@@ -1,4 +1,3 @@
-
 -- This plugin will highlight the following comments:
 --
 -- default keywords:
@@ -22,12 +21,13 @@
 -- TESTING: comments
 -- PASSED: comments
 -- FAILED: comments
--- 
+--
 -- custom:
 -- THEME: for nice formatting of theme descriptions in `user.colorscheme`
 -- DESC: for 'description' comments in code files ; inline comments that explain a small section of code within a function
 --       - alternative to INFO
-
+-- ASSERT: for stand-out assertion notes
+-- LINK: for stand-out URL references
 
 local M = {
   "folke/todo-comments.nvim",
@@ -46,12 +46,14 @@ local M = {
       TODO = { icon = " ", color = "error" },
       HACK = { icon = " ", color = "warning" },
       WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-      PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-      NOTE = { icon = " ", color = "hint" },
+      PERF = { icon = "󱦺 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+      NOTE = { icon = "󰍨 ", color = "hint" },
       TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
       -- custom:
       THEME = { icon = " ", color = "info" },
-      DESC = { icon = " ", color = "info", alt = { "INFO" } },
+      DESC = { icon = "󰍨 ", color = "info", alt = { "INFO" } },
+      ASSERT = { icon = "⏲ ", color = "test", alt = { "ASSERTION", "CHECK", "GUARD" } },
+      LINK = { icon = " ", color = "link" },
     },
     colors = {
       error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
@@ -60,7 +62,12 @@ local M = {
       hint = { "DiagnosticHint", "#10B981" },
       default = { "Identifier", "#7C3AED" },
       test = { "Identifier", "#FF00FF" },
+      link = { "#2563EB" },
     },
+    PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+    NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+    PERF = { icon = "󱦺 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+    NOTE = { icon = "󰍨 ", color = "hint", alt = { "INFO" } },
   },
 }
 
