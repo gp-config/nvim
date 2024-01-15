@@ -82,12 +82,12 @@ function M.config()
       },
 
       oldfiles = {
-        --
-        -- theme = "ivy",
-        -- initial_mode = "normal",
-        --
-        theme = "dropdown",
-        previewer = false,
+
+        theme = "ivy",
+        initial_mode = "normal",
+
+        -- theme = "dropdown",
+        -- previewer = false,
         --
       },
 
@@ -120,6 +120,10 @@ function M.config()
       lsp_implementations = {
         theme = "ivy",
         initial_mode = "normal",
+      },
+
+      lsp_document_symbols = {
+        theme = "ivy",
       },
     },
     extensions = {
