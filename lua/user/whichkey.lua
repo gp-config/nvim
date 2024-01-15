@@ -29,6 +29,7 @@ function M.config()
       q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
       U = { "<cmd>lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
     },
+
     p = {
       name = "Plugins",
       i = { "<cmd>Lazy install<cr>", "Install" },
@@ -68,7 +69,8 @@ function M.config()
       p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
       r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
       R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-      s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+      -- s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+      s = { "<cmd>Telescope lsp_document_symbols<cr>", "Find symbols in current file" },
       u = {
         "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
         "Undo Stage Hunk",
@@ -129,6 +131,13 @@ function M.config()
     T = {
       name = "Treesitter",
       i = { ":TSConfigInfo<cr>", "Info" },
+    },
+
+    o = {
+      name = "Obsidian",
+      f = { "<cmd>ObsidianQuickSwitch<cr>", "Find a note in the current vault" },
+      t = { "<cmd>ObsidianTemplate<cr>", "Find and insert a template" },
+      d = { "<cmd>ObsidianTemplate dayblock.md<cr>", "Insert a day block (for quarterly notes)" },
     },
   }
 
