@@ -1,8 +1,8 @@
 -- use this font for all GUI clients
 -- vim.opt.guifont = "JetBrains Mono:h11"
 vim.opt.guifont = "Berkeley Mono:h11"
+-- vim.opt.guifont = "MonaspaceXenon SemiBold:h11" -- does not seem to work
 vim.opt.linespace = 5
-
 
 -- NEOVIDE GUI:
 -- https://neovide.dev/configuration.html
@@ -30,6 +30,6 @@ else
   -- vim.g.neovide_padding_bottom = 29 -- command line looks like padding already
   vim.g.neovide_padding_left = 29
 
-  vim.g.neovide_scroll_animation_length = 0.15
+  vim.g.neovide_scroll_animation_length = 0.15 -- snappy!
+  vim.g.neovide_scroll_animation_length = 0.65 -- smooooooth
 end
-
