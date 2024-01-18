@@ -1,17 +1,20 @@
 local M = {
+  -- "https://github.com/folke/flash.nvim",
   "folke/flash.nvim",
   event = "VeryLazy",
   commit = "48817af25f51c0590653bbc290866e4890fe1cbe",
   -- Options here: https://github.com/folke/flash.nvim?tab=readme-ov-file#%EF%B8%8F-configuration
   opts = {
-    -- TODO: replace with my COLEMAK labels from work pc ideavim config!
-    -- labels = "asdfghjklqwertyuiopzxcvbnm",
+    -- NOTE:
+    -- labels below are optimized for a split COLEMAK layout
+    labels = "yquwlpjhzxkcdvatriseon",
     label = {
       rainbow = {
         enabled = true,
-        shade = 2 -- number between 1 (light) and 9 (dark)
-      }
-    }
+        -- shade = 2 -- number between 1 (light) and 9 (dark)
+        shade = 5, -- number between 1 (light) and 9 (dark)
+      },
+    },
   },
   -- stylua: ignore
   keys = {
