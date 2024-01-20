@@ -1,33 +1,35 @@
 -- This plugin will highlight the following comments:
 --
 -- default keywords:
--- FIX: comments
--- FIXME: comments
--- BUG: comments
--- FIXIT: comments
--- ISSUE: comments
--- TODO: comments
--- HACK: comments
--- WARN: comments
--- WARNING: comments
--- XXX: comments
--- PERF: comments
--- PERFORMANCE: comments
--- OPTIM: comments
--- OPTIMIZE: comments
--- NOTE: comments
--- INFO: comments
--- TEST: comments
--- TESTING: comments
--- PASSED: comments
--- FAILED: comments
+-- FIX:
+-- FIXME:
+-- BUG:
+-- FIXIT:
+-- ISSUE:
+-- TODO:
+-- HACK:
+-- WARN:
+-- WARNING:
+-- XXX:
+-- PERF:
+-- PERFORMANCE:
+-- OPTIM:
+-- OPTIMIZE:
+-- NOTE:
+-- INFO:
+-- TEST:
+-- TESTING:
+-- PASSED:
+-- FAILED:
 --
 -- custom:
--- THEME: for nice formatting of theme descriptions in `user.colorscheme`
--- DESC: for 'description' comments in code files ; inline comments that explain a small section of code within a function
---       - alternative to INFO
--- ASSERT: for stand-out assertion notes
+------------
+-- GP: for personal comments & attribution
+--@GP: for personal comments & attribution
 -- LINK: for stand-out URL references
+-- ASSERT: for stand-out assertion notes
+-- DESC: for 'description' comments in code files ; inline comments that explain a small section of code within a function
+-- THEME: for nice formatting of theme descriptions in `user.colorscheme`
 
 local M = {
   "folke/todo-comments.nvim",
@@ -54,6 +56,7 @@ local M = {
       DESC = { icon = "󰍨 ", color = "info", alt = { "INFO" } },
       ASSERT = { icon = "⏲ ", color = "test", alt = { "ASSERTION", "CHECK", "GUARD" } },
       LINK = { icon = " ", color = "link" },
+      GP = { icon = " ", color = "link" },
     },
     colors = {
       error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
@@ -64,10 +67,6 @@ local M = {
       test = { "Identifier", "#FF00FF" },
       link = { "#2563EB" },
     },
-    PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-    NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
-    PERF = { icon = "󱦺 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-    NOTE = { icon = "󰍨 ", color = "hint", alt = { "INFO" } },
   },
 }
 
