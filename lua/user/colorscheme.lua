@@ -7,7 +7,8 @@ local M = {
   -- Uncomment to pick one
   --
   -- "gp-themes/oxographene.nvim",
-  "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" },
+  "mcchrish/zenbones.nvim",
+  dependencies = { "rktjmp/lush.nvim" },
   -- "catppuccin/nvim",
   -- "folke/tokyonight.nvim",
   -- "sainnhe/gruvbox-material",
@@ -26,7 +27,7 @@ function M.config()
 
   -- THEME:
   -- Choose LIGHT or DARK!
-  -- 
+  --
   vim.o.background = "dark"
   -- vim.o.background = "light"
 
@@ -41,11 +42,11 @@ function M.config()
   -- Zenbones by mcchrish
   -- a set of minimal, low-color themes with high text contrast.
   -- lots of good, high-focus light and dark options.
-  -- 
-  -- local colorscheme = "zenbones"             -- supports light/dark --
+  --
+  local colorscheme = "zenbones" -- supports light/dark --
   -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
-  local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
+  -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
   -- local colorscheme = "rosebones"            -- supports light/dark -- rosey colors, dark variant has blue bg
   -- local colorscheme = "vimbones"             -- supports light      -- bright green, it's ok
   -- local colorscheme = "neobones"             -- supports light/dark -- nice -- light is minty, dark is a deep sea blue

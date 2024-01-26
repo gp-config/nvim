@@ -82,6 +82,7 @@ function M.config()
       },
 
       oldfiles = {
+
         theme = "ivy",
         initial_mode = "normal",
         -- theme = "dropdown",
@@ -100,22 +101,23 @@ function M.config()
       },
 
       lsp_references = {
-        theme = "dropdown",
+        -- theme = "dropdown",
+        theme = "ivy",
         initial_mode = "normal",
       },
 
       lsp_definitions = {
-        theme = "dropdown",
+        theme = "ivy",
         initial_mode = "normal",
       },
 
       lsp_declarations = {
-        theme = "dropdown",
+        theme = "ivy",
         initial_mode = "normal",
       },
 
       lsp_implementations = {
-        theme = "dropdown",
+        theme = "ivy",
         initial_mode = "normal",
       },
 

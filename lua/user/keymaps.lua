@@ -119,6 +119,7 @@ vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
 -- Find additional telescope keybinds in `telescope.lua` under "mappings".
 keymap("n", "<leader>rg", ":Telescope live_grep<CR>", opts) -- live_grep also bound to a different combination in whichkey.lua
 keymap("n", "<leader>gf", ":Telescope find_files<CR>", opts) -- find_files also bound to a different combination in whichkey.lua
+keymap("n", "gr", ":Telescope lsp_references<CR>", opts)
 
 -- Git
 keymap("n", "lg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts) -- calls a function defined in toggleterm.lua
