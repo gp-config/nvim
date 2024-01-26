@@ -67,6 +67,10 @@ local M = {
       test = { "Identifier", "#FF00FF" },
       link = { "#2563EB" },
     },
+    PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+    NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+    PERF = { icon = "󱦺 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+    NOTE = { icon = "󰍨 ", color = "hint", alt = { "INFO" } },
   },
 }
 

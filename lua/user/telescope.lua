@@ -85,7 +85,6 @@ function M.config()
 
         theme = "ivy",
         initial_mode = "normal",
-
         -- theme = "dropdown",
         -- previewer = false,
         --
