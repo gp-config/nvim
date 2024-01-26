@@ -30,6 +30,7 @@ else
   -- vim.g.neovide_padding_bottom = 29 -- command line looks like padding already
   vim.g.neovide_padding_left = 29
 
-  vim.g.neovide_scroll_animation_length = 0.15 -- snappy!
-  vim.g.neovide_scroll_animation_length = 0.65 -- smooooooth
+  -- vim.g.neovide_scroll_animation_length = 0.15 -- snappy!
+  vim.g.neovide_scroll_animation_length = 0.35 -- medium
+  -- vim.g.neovide_scroll_animation_length = 0.65 -- smooooooth
 end
