@@ -2,7 +2,7 @@
 -- vim.opt.guifont = "JetBrains Mono:h11"
 vim.opt.guifont = "Berkeley Mono:h11"
 -- vim.opt.guifont = "MonaspaceXenon SemiBold:h11" -- does not seem to work
-vim.opt.linespace = 5
+-- vim.opt.linespace = 5
 
 -- NEOVIDE GUI:
 -- https://neovide.dev/configuration.html
