@@ -43,7 +43,8 @@ function M.config()
   -- a set of minimal, low-color themes with high text contrast.
   -- lots of good, high-focus light and dark options.
   --
-  local colorscheme = "zenbones" -- supports light/dark --
+  local colorscheme = "randombones" -- picks a random zenbones theme --
+  -- local colorscheme = "zenbones"             -- supports light/dark --
   -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
