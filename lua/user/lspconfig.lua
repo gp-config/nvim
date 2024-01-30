@@ -50,7 +50,7 @@ function M.config()
   local lspconfig = require "lspconfig"
   local icons = require "user.icons"
 
-  local servers = {
+  local ensure_installed = {
     "lua_ls",
     "cssls",
     "html",
@@ -64,7 +64,7 @@ function M.config()
     "tailwindcss",
     "elixirls",
     "rust_analyzer",
-  }
+  } -- put the language you want in this table
 
   local default_diagnostic_config = {
     signs = {
@@ -100,7 +100,7 @@ function M.config()
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
   require("lspconfig.ui.windows").default_options.border = "rounded"
 
-  for _, server in pairs(servers) do
+  for _, server in pairs(ensure_installed) do
     local opts = {
       on_attach = M.on_attach,
       capabilities = M.common_capabilities(),

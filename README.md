@@ -6,6 +6,12 @@ Uses the [lazy.nvim](https://github.com/folke/lazy.nvim) package manager by folk
 
 ---
 
+Syntax highlighting for languages are provided by treesitter grammars.
+
+Completion features are provided by LSP servers. They're managed by `nvim-lspconfig`.
+
+---
+
 #### init flow
 
 - `init.lua` is loaded by nvim, which `require`s some stuff (including an important function called `spec`)
@@ -37,9 +43,110 @@ Sometimes those plugin modules also have a `setup` method associated with them, 
 
 ---
 
+### #HOWTO: Install a new LSP server
+
+here's how to install e.g. `astro`;
+
+1. Run `mason`
+
+```
+:Mason
+```
+
+2. Search the LSP tab for `astro`
+
+3. Press `enter` to open the selected line, and read about the package
+
+4. Press `i` to install the language server
+
+
+
+
+
+
+### #HOWTO: Add an LSP to the default configuration 
+
+here's how to ensure that nvim will install an LSP server on startup (if it's not already installed)
+
+- open the `user/lspconfig.lua` file
+- find the `ensure_installed` block
+- add a line for the LSP
+
+e.g. adding astro - this installs [withastro/language-tools](https://github.com/withastro/language-tools)
+
+```diff
+  local ensure_installed = {
+    "lua_ls",
+    "cssls",
+    "html",
+    "tsserver",
++   "astro",
+    "pyright",
+    "bashls",
+    "jsonls",
+    "yamlls",
+    "marksman",
+    "tailwindcss",
+    "elixirls",
+    "rust_analyzer",
+  } -- put the language you want in this table
+```
+
+
+
+
+
+
+### #HOWTO: Install a new tree-sitter grammar
+
+here's how to install e.g. `astro`;
+
+this installs [virchau13/tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) using the `TSInstall` command.
+
+
+```
+:TSInstall astro
+```
+
+
+
+
+### #HOWTO: Add a tree-sitter grammar to the default configuration
+
+here's how to ensure that nvim will install a tree-sitter grammar on startup (if it's not already installed)
+
+- open the `user/treesitter.lua` file
+- find the `ensure_installed` block
+- add a line for the grammar
+
+e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro)
+
+```diff
+  ensure_installed = {
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "bash",
+    "python",
+    "rust",
+    "elixir",
+    "heex",
+    "eex",
++   "astro",
+  }, -- put the language you want in this table
+```
+
+
+
+
+
+
+---
+
 # TODO
 
 - [ ] install that plugin which lets you set a specific color scheme per language
 - [ ] set default theme for `.lua` files to `lunaperche`
     - it's installed by default in vim and looks pretty good for lua
     - makes a good theme for nvim config editing
+

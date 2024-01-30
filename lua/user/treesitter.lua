@@ -38,7 +38,8 @@ function M.config()
       "elixir",
       "heex",
       "eex",
-    }, -- put the language you want in this array
+      "astro",
+    }, -- put the language you want in this table
     ignore_install = { "" },
     sync_install = false,
     highlight = {
