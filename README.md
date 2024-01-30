@@ -37,9 +37,50 @@ Sometimes those plugin modules also have a `setup` method associated with them, 
 
 ---
 
+
+#HOWTO: Install a new tree-sitter grammar
+
+here's how to install `astro`;
+
+this installs [virchau13/tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) using the `TSInstall` command.
+
+
+```
+:TSInstall astro
+```
+
+#HOWTO: Add a tree-sitter grammar to the default configuration
+
+here's how to ensure that nvim will install a tree-sitter grammar on startup (if it's not already installed)
+
+- open the `user/treesitter.lua` file
+- find the `ensure_installed` block
+- add a line for the grammar
+
+e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro)
+
+```diff
+  ensure_installed = {
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "bash",
+    "python",
+    "rust",
+    "elixir",
+    "heex",
+    "eex",
++   "astro",
+  }, -- put the language you want in this table
+```
+
+
+---
+
 # TODO
 
 - [ ] install that plugin which lets you set a specific color scheme per language
 - [ ] set default theme for `.lua` files to `lunaperche`
     - it's installed by default in vim and looks pretty good for lua
     - makes a good theme for nvim config editing
+
