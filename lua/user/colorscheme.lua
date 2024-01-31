@@ -1,3 +1,4 @@
+--stylua: ignore start
 require "user.launch"
 
 local M = {
@@ -43,16 +44,16 @@ function M.config()
   -- a set of minimal, low-color themes with high text contrast.
   -- lots of good, high-focus light and dark options.
   --
-  local colorscheme = "randombones" -- picks a random zenbones theme --
+  -- local colorscheme = "randombones"          -- picks a random zenbones theme --
   -- local colorscheme = "zenbones"             -- supports light/dark --
   -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
-  -- local colorscheme = "rosebones"            -- supports light/dark -- rosey colors, dark variant has blue bg
+  local colorscheme = "rosebones"             -- supports light/dark -- rosey colors, dark variant has blue bg
   -- local colorscheme = "vimbones"             -- supports light      -- bright green, it's ok
   -- local colorscheme = "neobones"             -- supports light/dark -- nice -- light is minty, dark is a deep sea blue
   -- local colorscheme = "seoulbones"           -- supports light/dark -- mid -- low contrast, bright colors
-  -- local colorscheme = "duckbones"            -- supports dark       -- mid
+  -- local colorscheme = "duckbones"            -- supports dark       -- kind anice for HTML
   -- local colorscheme = "nordbones"            -- supports dark       -- mid
   --
 
