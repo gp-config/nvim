@@ -16,6 +16,7 @@ spec "user.noice"                         -- noice: experimental vim command lin
 spec "user.mason"                         -- mason: package manager UI
 spec "user.dapui"                         -- dapui: debugger UI
 spec "user.navic"                         -- navic: statusline breadcrumbs UI
+spec "user.trouble"                       -- trouble: diagnostics list UI
 -- spec "user.rnvimr"                        -- DISABLED: trying out triptych for a bit instead -- rnvimr: use ranger as nvim's file browser UI (ranger needs to be installed on the system)
 spec "user.triptych"                      -- triptych: pure lua/nvim implementation of a ranger-style file browser UI
 spec "user.navbuddy"                      -- navbuddy: structure navigation UI
