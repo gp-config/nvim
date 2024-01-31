@@ -64,6 +64,7 @@ function M.config()
     "tailwindcss",
     "elixirls",
     "rust_analyzer",
+    "svelte",
   } -- put the language you want in this table
 
   local default_diagnostic_config = {
