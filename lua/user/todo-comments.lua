@@ -1,3 +1,4 @@
+--stylua: ignore start
 -- This plugin will highlight the following comments:
 --
 -- default keywords:

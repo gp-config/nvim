@@ -1,3 +1,4 @@
+--stylua: ignore start
 require "user.launch"
 require "user.options"
 require "user.gui-clients"
