@@ -31,6 +31,7 @@
 -- DESC: for 'description' comments in code files ; inline comments that explain a small section of code within a function
 -- THEME: for nice formatting of theme descriptions in `user.colorscheme`
 -- UTIL: for stand-out utility function marking
+-- MARK: swift-style mark comments
 
 local M = {
   "folke/todo-comments.nvim",
@@ -59,6 +60,7 @@ local M = {
       LINK = { icon = " ", color = "link" },
       GP = { icon = " ", color = "link" },
       UTIL = { icon = " ", color = "warning" },
+      MARK = { icon = " ", color = "warning" },
     },
     colors = {
       error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
