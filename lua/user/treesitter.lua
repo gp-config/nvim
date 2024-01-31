@@ -39,6 +39,7 @@ function M.config()
       "heex",
       "eex",
       "astro",
+      "svelte",
     }, -- put the language you want in this table
     ignore_install = { "" },
     sync_install = false,
