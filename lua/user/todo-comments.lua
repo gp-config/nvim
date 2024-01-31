@@ -1,7 +1,10 @@
 --stylua: ignore start
 -- This plugin will highlight the following comments:
 --
--- default keywords:
+--
+-- DEFAULT KEYWORDS
+----------------------
+--
 -- FIX:
 -- FIXME:
 -- BUG:
@@ -23,16 +26,17 @@
 -- PASSED:
 -- FAILED:
 --
--- custom:
-------------
--- GP: for personal comments & attribution
---@GP: for personal comments & attribution
--- LINK: for stand-out URL references
+-- CUSTOM
+----------------------
+--
+-- GP:     for personal comments & attribution
+--@GP:     for personal comments & attribution
+-- LINK:   for stand-out URL references
 -- ASSERT: for stand-out assertion notes
--- DESC: for 'description' comments in code files ; inline comments that explain a small section of code within a function
--- THEME: for nice formatting of theme descriptions in `user.colorscheme`
--- UTIL: for stand-out utility function marking
--- MARK: swift-style mark comments
+-- DESC:   for 'description' comments in code files ; inline comments that explain a small section of code within a function
+-- THEME:  for nice formatting of theme descriptions in `user.colorscheme`
+-- UTIL:   for stand-out utility function marking
+-- MARK:   swift-style mark comments
 
 local M = {
   "folke/todo-comments.nvim",
@@ -43,10 +47,13 @@ local M = {
   opts = {
     keywords = {
       FIX = {
-        icon = " ", -- icon used for the sign, and in search results
-        color = "error", -- can be a hex color, or a named color (see below)
-        alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+        icon = " ",      -- icon used for the sign, and in search results
+        color = "error",  -- can be a hex color, or a named color (see below)
         -- signs = false, -- configure signs for some keywords individually
+        alt = {           -- a set of other keywords that all map to this FIX keywords
+          "FIXME", "BUG", "FIXIT", "ISSUE"
+        },
+
       },
       TODO = { icon = " ", color = "error" },
       HACK = { icon = " ", color = "warning" },
@@ -54,7 +61,8 @@ local M = {
       PERF = { icon = "󱦺 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
       NOTE = { icon = "󰍨 ", color = "hint" },
       TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-      -- custom:
+
+      -- NOTE: CUSTOM:
       THEME = { icon = " ", color = "info" },
       DESC = { icon = "󰍨 ", color = "info", alt = { "INFO" } },
       ASSERT = { icon = "⏲ ", color = "test", alt = { "ASSERTION", "CHECK", "GUARD" } },
@@ -72,10 +80,6 @@ local M = {
       test = { "Identifier", "#FF00FF" },
       link = { "#2563EB" },
     },
-    PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-    NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
-    PERF = { icon = "󱦺 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-    NOTE = { icon = "󰍨 ", color = "hint", alt = { "INFO" } },
   },
 }
 
