@@ -16,8 +16,8 @@ Completion features are provided by LSP servers. They're managed by `nvim-lspcon
 
 - `init.lua` is loaded by nvim, which `require`s some stuff (including an important function called `spec`)
 - `init.lua` runs `spec` for a bunch of plugins,
-    - (plugins are listed as lua module names)
-    - this builds us a table of plugin modules to import - they're all added to the `LAZY_PLUGIN_SPEC` global variable
+  - (plugins are listed as lua module names)
+  - this builds us a table of plugin modules to import - they're all added to the `LAZY_PLUGIN_SPEC` global variable
 - `init.lua` loads the `user.lazy` module
 - `user.lazy` installs `lazy.nvim` package manager and runs its setup function, passing the `LAZY_PLUGIN_SPEC` global variable
 
@@ -40,7 +40,6 @@ Each of those plugin modules represents a table of `lazy.nvim` options.
 
 Sometimes those plugin modules also have a `setup` method associated with them, which is run automatically by `lazy.nvim`.
 
-
 ---
 
 ### #HOWTO: Install a new LSP server
@@ -59,12 +58,7 @@ here's how to install e.g. `astro`;
 
 4. Press `i` to install the language server
 
-
-
-
-
-
-### #HOWTO: Add an LSP to the default configuration 
+### #HOWTO: Add an LSP to the default configuration
 
 here's how to ensure that nvim will install an LSP server on startup (if it's not already installed)
 
@@ -92,24 +86,15 @@ e.g. adding astro - this installs [withastro/language-tools](https://github.com/
   } -- put the language you want in this table
 ```
 
-
-
-
-
-
 ### #HOWTO: Install a new tree-sitter grammar
 
 here's how to install e.g. `astro`;
 
 this installs [virchau13/tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) using the `TSInstall` command.
 
-
 ```
 :TSInstall astro
 ```
-
-
-
 
 ### #HOWTO: Add a tree-sitter grammar to the default configuration
 
@@ -136,17 +121,18 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
   }, -- put the language you want in this table
 ```
 
-
-
-
-
-
 ---
 
 # TODO
 
 - [ ] install that plugin which lets you set a specific color scheme per language
 - [ ] set default theme for `.lua` files to `lunaperche`
-    - it's installed by default in vim and looks pretty good for lua
-    - makes a good theme for nvim config editing
-
+  - it's installed by default in vim and looks pretty good for lua
+  - makes a good theme for nvim config editing
+- [ ] switch from null-ls to none-ls
+- [ ] make a `snippet or cmp plugin or none-ls plugin` to show an autocomplete dropdown for all the supported keys in `user.todo-comments`
+- [ ] project-specific settings
+  - each project should be able to specify its own settings file that neovim loads when the repo is opened
+  - the intent is mainly for LSP settings right now;
+    - e.g. provide a sub-directory to elixir's LSP projectDir setting
+    - e.g. provide rust-analyzer options for false-positive dead client/server code in a leptos project
