@@ -5,9 +5,7 @@ local M = {
 }
 
 function M.config()
-  local persistence = require("persistence")
-
-  persistence.setup({
+  require("persistence").setup({
     -- LINK: https://github.com/folke/persistence.nvim?tab=readme-ov-file#%EF%B8%8F-configuration
     --
     dir = vim.fn.expand(vim.fn.stdpath "state" .. "/sessions/"),              -- directory where session files are saved
@@ -18,9 +16,10 @@ function M.config()
 
   -- INFO: on VimEnter - load the most recent session.
   --       sessions are auto-saved per-directory when vim quits.
-  vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  vim.api.nvim_create_autocmd("VimEnter", {
+    group = vim.api.nvim_create_augroup("persistence", { clear = true }),
     callback = function()
-      persistence.load()
+      require("persistence").load()
     end,
   })
 end
