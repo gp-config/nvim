@@ -13,7 +13,7 @@ function M.config()
   local opts = { noremap = true, silent = true }
   keymap("n", "<leader>nn", ":NoNeckPain<cr>", opts)
 
-  vim.cmd "NoNeckPain"
+  -- vim.cmd "NoNeckPain" -- enable by default on nvim startup
 end
 
 return M
