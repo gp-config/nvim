@@ -7,6 +7,7 @@ local M = {
 function M.config()
   local mappings = {
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment" },
+    ["."] = { "<cmd>lua require'persistence'.load()<cr>", "Load last session" },
     -- ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     -- b = {
     --   name = "Buffers",
