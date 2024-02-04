@@ -137,3 +137,4 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
     - e.g. provide a sub-directory to elixir's LSP projectDir setting
     - e.g. provide rust-analyzer options for false-positive dead client/server code in a leptos project
 - [ ] when a new buffer is opened that isn't already in the buffer list, cleanup old buffers past a certain limit (maybe 25 buffers?)
+- [ ] is there a way to trigger code actions from inside the Trouble window?
