@@ -206,6 +206,7 @@ function M.config()
       select = false,
     },
     window = {
+      ---@diagnostic disable-next-line: missing-fields
       completion = {
         -- border = "rounded",
         winhighlight = "Normal:Pmenu,CursorLine:PmenuSel,FloatBorder:FloatBorder,Search:None",
@@ -214,6 +215,7 @@ function M.config()
         scrollbar = true,
         scrolloff = 8,
       },
+      ---@diagnostic disable-next-line: missing-fields
       documentation = {
         -- border = "rounded",
         winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,Search:None",
