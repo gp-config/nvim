@@ -18,9 +18,12 @@ vim.g.maplocalleader = " "
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
 keymap("n", "<C-i>", "<C-i>", opts)
 
+-- Save files with ctrl-s
+keymap("n", "<C-s>", ":w<CR>", opts)
+
 -- window navigation
--- keymap("n", "<leader>v", "<C-w>v<C-w>h") -- vertical window split
-keymap("n", "<leader>v", ":60 vsplit <CR><C-w>h", { silent = true }) -- vertical window split
+keymap("n", "<leader>v", "<C-w>v<C-w>h") -- vertical window split
+-- keymap("n", "<leader>v", ":60 vsplit <CR><C-w>h", { silent = true }) -- vertical window split
 keymap("n", "<leader>sh", "<C-w>s") -- horizontal window split
 keymap("n", "<leader>c", ":close<CR>", { silent = true })
 keymap("n", "<leader>w<Left>", "<C-w>h")
