@@ -120,27 +120,7 @@ function M.config()
     },
     ---@diagnostic disable-next-line: missing-fields
     formatting = {
-      -- TODO:@GP:  Update the order in here. do it using the new textobjects plugin!
-      fields = { "abbr", "kind", "menu" },
       format = function(entry, vim_item)
-        -- vim_item.kind = icons.kind[vim_item.kind]
-        vim_item.kind = string.format("%s%s", icons.kind[vim_item.kind], vim_item.kind)
-        vim_item.menu = ({
-          -- nvim_lsp = "",
-          -- nvim_lua = "",
-          -- luasnip = "",
-          -- buffer = "",
-          -- path = "",
-          -- emoji = "",
-          nvim_lsp = "ﲳ",
-          nvim_lua = "",
-          treesitter = "",
-          path = "ﱮ",
-          buffer = "﬘",
-          zsh = "",
-          vsnip = "",
-          spell = "暈",
-        })[entry.source.name]
         if entry.source.name == "copilot" then
           vim_item.kind = icons.git.Octoface
           vim_item.kind_hl_group = "CmpItemKindCopilot"
@@ -166,8 +146,64 @@ function M.config()
           vim_item.kind_hl_group = "CmpItemKindEmoji"
         end
 
+        -- vim_item.kind = icons.kind[vim_item.kind] -- INFO: Only icon
+        vim_item.kind = string.format("%s", vim_item.kind) -- INFO: Only text
+        -- vim_item.kind = string.format("%s %s ", vim_item.kind, icons.kind[vim_item.kind]) -- INFO: icon and text
+
+        -- INFO: Menu variant - no icons
+        -- vim_item.menu = ({
+        --   nvim_lsp = "",
+        --   nvim_lua = "",
+        --   luasnip = "",
+        --   buffer = "",
+        --   path = "",
+        --   emoji = "",
+        --   treesitter = "",
+        --   vsnip = "",
+        --   spell = "",
+        -- })[entry.source.name]
+
+        -- INFO: Menu variant - text icons
+        -- vim_item.menu = ({
+        --   nvim_lsp = "🖉",
+        --   -- nvim_lsp = "ﲳ", -- alt
+        --   nvim_lua = "",
+        --   treesitter = "",
+        --   path = "ﱮ",
+        --   buffer = "﬘",
+        --   vsnip = "",
+        --   luasnip = "",
+        --   spell = "暈",
+        -- })[entry.source.name]
+
+        -- INFO: Menu variant - text only
+        -- vim_item.menu = ({
+        --   nvim_lsp = "LSP",
+        --   nvim_lua = "LUA",
+        --   treesitter = "TS",
+        --   path = "PTH",
+        --   buffer = "BUF",
+        --   vsnip = "SNP",
+        --   luasnip = "SNP",
+        --   spell = "SPL",
+        -- })[entry.source.name]
+
+        -- INFO: Menu variant - text and icon
+        vim_item.menu = ({
+          nvim_lsp = "🖉 LSP",
+          -- nvim_lsp = "ﲳ LSP", -- alt
+          nvim_lua = " LUA",
+          treesitter = " TS",
+          path = "ﱮ PTH",
+          buffer = "﬘ BUF",
+          vsnip = " SNP",
+          luasnip = " SNP",
+          spell = "暈SPL",
+        })[entry.source.name]
+
         return vim_item
       end,
+      fields = { "menu", "abbr", "kind" },
     },
     sources = {
       { name = "copilot" },
@@ -210,8 +246,8 @@ function M.config()
       completion = {
         -- border = "rounded",
         winhighlight = "Normal:Pmenu,CursorLine:PmenuSel,FloatBorder:FloatBorder,Search:None",
-        col_offset = -3,
-        side_padding = 3,
+        col_offset = -8,
+        -- side_padding = 7,
         scrollbar = true,
         scrolloff = 8,
       },
