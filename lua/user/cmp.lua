@@ -66,12 +66,14 @@ function M.config()
 
   local icons = require "user.icons"
 
+  ---@diagnostic disable-next-line: missing-fields
   cmp.setup {
     snippet = {
       expand = function(args)
         luasnip.lsp_expand(args.body) -- For `luasnip` users.
       end,
     },
+    ---@diagnostic disable-next-line: missing-fields
     mapping = cmp.mapping.preset.insert {
       ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
       ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
@@ -116,17 +118,28 @@ function M.config()
         "s",
       }),
     },
+    ---@diagnostic disable-next-line: missing-fields
     formatting = {
-      fields = { "kind", "abbr", "menu" },
+      -- TODO:@GP:  Update the order in here. do it using the new textobjects plugin!
+      fields = { "abbr", "kind", "menu" },
       format = function(entry, vim_item)
-        vim_item.kind = icons.kind[vim_item.kind]
+        -- vim_item.kind = icons.kind[vim_item.kind]
+        vim_item.kind = string.format("%s%s", icons.kind[vim_item.kind], vim_item.kind)
         vim_item.menu = ({
-          nvim_lsp = "",
-          nvim_lua = "",
-          luasnip = "",
-          buffer = "",
-          path = "",
-          emoji = "",
+          -- nvim_lsp = "",
+          -- nvim_lua = "",
+          -- luasnip = "",
+          -- buffer = "",
+          -- path = "",
+          -- emoji = "",
+          nvim_lsp = "ﲳ",
+          nvim_lua = "",
+          treesitter = "",
+          path = "ﱮ",
+          buffer = "﬘",
+          zsh = "",
+          vsnip = "",
+          spell = "暈",
         })[entry.source.name]
         if entry.source.name == "copilot" then
           vim_item.kind = icons.git.Octoface
@@ -194,15 +207,15 @@ function M.config()
     },
     window = {
       completion = {
-        border = "rounded",
+        -- border = "rounded",
         winhighlight = "Normal:Pmenu,CursorLine:PmenuSel,FloatBorder:FloatBorder,Search:None",
         col_offset = -3,
-        side_padding = 1,
-        scrollbar = false,
+        side_padding = 3,
+        scrollbar = true,
         scrolloff = 8,
       },
       documentation = {
-        border = "rounded",
+        -- border = "rounded",
         winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,Search:None",
       },
     },
