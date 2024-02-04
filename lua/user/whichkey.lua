@@ -123,17 +123,10 @@ function M.config()
       e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
     },
 
-    -- TODO: maybe remove this tabs block entirely?
     t = {
       name = "Toggle",
-      t = { "<cmd>Twilight<cr>", "Toggle Twilight (code lowlighting / focus mode)" },
-      -- a = { "<cmd>$tabnew<cr>", "New Empty Tab" },
-      -- A = { "<cmd>tabnew %<cr>", "New Tab" },
-      -- n = { "<cmd>tabn<cr>", "Next" },
-      -- o = { "<cmd>tabonly<cr>", "Only" },
-      -- p = { "<cmd>tabp<cr>", "Prev" },
-      -- h = { "<cmd>-tabmove<cr>", "Move Left" },
-      -- l = { "<cmd>+tabmove<cr>", "Move Right" },
+      t = { "<cmd>TroubleToggle<cr>", "Toggle Trouble (list of errors and warnings for active buffers)" },
+      f = { l = { "<cmd>Twilight<cr>", "Toggle Twilight (code lowlighting / focus mode)" } },
     },
 
     T = {
