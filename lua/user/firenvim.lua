@@ -1,5 +1,4 @@
 local M = {
-  -- "https://github.com/folke/flash.nvim",
   "glacambre/firenvim",
 
   -- Lazy load firenvim
@@ -9,5 +8,16 @@ local M = {
     vim.fn["firenvim#install"](0)
   end,
 }
+
+function M.config()
+  vim.g.firenvim_config = {
+    -- globalSettings = {},
+    localSettings = {
+      [".*"] = {
+        takeover = "never",
+      },
+    },
+  }
+end
 
 return M
