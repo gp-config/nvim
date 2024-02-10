@@ -145,3 +145,9 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
 - [ ] try out [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 - [ ] use ranger as filebrowser by default, fall back to triptych when not available
   - [ ] or maybe try using that one rustlang ranger-inspired project?
+
+---
+
+recent keybinds:
+
+`<leader>s<right | left>` - swap current argument left or right
