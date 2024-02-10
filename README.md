@@ -141,3 +141,4 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
 - [ ] could we add a cli argument to lazygit, allowing us to open lazygit from nvim and automatically select the active nvim file in the lazygit file tree?
 - [ ] try out [nvim-pack/nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
 - [ ] try out [edluffy/specs.nvim](https://github.com/edluffy/specs.nvim)
+- [ ] re-add [lspkind](https://github.com/onsails/lspkind.nvim) to cmp
