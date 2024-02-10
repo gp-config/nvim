@@ -8,9 +8,9 @@ local M = {
   -- Uncomment to pick one
   --
   -- "gp-themes/oxographene.nvim",
-  "mcchrish/zenbones.nvim",
-  dependencies = { "rktjmp/lush.nvim" },
-  -- "catppuccin/nvim",
+  -- "mcchrish/zenbones.nvim",
+  -- dependencies = { "rktjmp/lush.nvim" },
+  "catppuccin/nvim",
   -- "folke/tokyonight.nvim",
   -- "sainnhe/gruvbox-material",
   -- "savq/melange-nvim",
@@ -23,7 +23,7 @@ local M = {
   priority = 1000,
 }
 
-function ShowColorMenu()
+function GP_ShowColorMenu()
   vim.ui.select(
     { 'light', 'dark', 'pick theme' },
     {
@@ -66,7 +66,7 @@ function M.config()
   -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
-  local colorscheme = "rosebones"             -- supports light/dark -- rosey colors, dark variant has blue bg
+  -- local colorscheme = "rosebones"             -- supports light/dark -- rosey colors, dark variant has blue bg
   -- local colorscheme = "vimbones"             -- supports light      -- bright green, it's ok
   -- local colorscheme = "neobones"             -- supports light/dark -- nice -- light is minty, dark is a deep sea blue
   -- local colorscheme = "seoulbones"           -- supports light/dark -- mid -- low contrast, bright colors
@@ -79,7 +79,7 @@ function M.config()
   -- Cold background, colorful highlighting with warm pastel colors.
   --
   -- local colorscheme = "catppuccin-latte"     -- light theme (default light bg)
-  -- local colorscheme = "catppuccin-mocha"     -- dark theme, darkest variant (default dark bg)
+  local colorscheme = "catppuccin-mocha"     -- dark theme, darkest variant (default dark bg)
   -- local colorscheme = "catppuccin-macchiato" -- dark theme, medium variant
   -- local colorscheme = "catppuccin-frappe"    -- dark theme, lightest variant
 

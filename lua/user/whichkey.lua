@@ -143,7 +143,7 @@ function M.config()
 
     m = {
       name = "Manage",
-      c = { "<cmd>lua ShowColorMenu()<cr>", "Manage color theme" },
+      c = { "<cmd>lua GP_ShowColorMenu()<cr>", "Manage color theme" },
     },
   }
 
