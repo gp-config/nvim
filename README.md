@@ -142,3 +142,6 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
 - [ ] try out [nvim-pack/nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
 - [ ] try out [edluffy/specs.nvim](https://github.com/edluffy/specs.nvim)
 - [ ] re-add [lspkind](https://github.com/onsails/lspkind.nvim) to cmp
+- [ ] try out [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
+- [ ] use ranger as filebrowser by default, fall back to triptych when not available
+  - [ ] or maybe try using that one rustlang ranger-inspired project?
