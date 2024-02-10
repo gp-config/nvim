@@ -1,8 +1,22 @@
 -- use this font for all GUI clients
+
+-- MARK: [md] JetBrains Mono
 -- vim.opt.guifont = "JetBrains Mono:h11"
-vim.opt.guifont = "Berkeley Mono:h11"
--- vim.opt.guifont = "MonaspaceXenon SemiBold:h11" -- does not seem to work
+-- vim.opt.linespace = 0
 -- vim.opt.linespace = 5
+
+-- MARK: [md] Berkeley Mono
+vim.opt.guifont = "Berkeley Mono:h11"
+vim.opt.linespace = 0
+-- vim.opt.linespace = 5
+
+-- MARK: [sm] Monaspace Xenon
+-- vim.opt.guifont = "Monaspace Xenon:h9"
+-- vim.opt.linespace = 6
+
+-- MARK: [lg] Monaspace Xenon SemiBold
+-- vim.opt.guifont = "Monaspace Xenon SemiBold:h11"
+-- vim.opt.linespace = 8
 
 -- NEOVIDE GUI:
 -- https://neovide.dev/configuration.html
