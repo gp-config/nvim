@@ -140,6 +140,11 @@ function M.config()
       t = { "<cmd>ObsidianTemplate<cr>", "Find and insert a template" },
       d = { "<cmd>ObsidianTemplate dayblock.md<cr>", "Insert a day block (for quarterly notes)" },
     },
+
+    m = {
+      name = "Manage",
+      c = { "<cmd>lua ShowColorMenu()<cr>", "Manage color theme" },
+    },
   }
 
   local opts = {

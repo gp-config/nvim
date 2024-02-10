@@ -23,6 +23,23 @@ local M = {
   priority = 1000,
 }
 
+function ShowColorMenu()
+  vim.ui.select(
+    { 'light', 'dark', 'pick theme' },
+    {
+      prompt = 'Select light, dark, or Pick Theme',
+    },
+    function(choice)
+      if choice == 'light' then
+        vim.o.background = "light"
+      elseif choice == 'dark' then
+        vim.o.background = "dark"
+      elseif choice == 'pick theme' then
+        require('telescope.builtin').colorscheme{}
+    end
+  end)
+end
+
 function M.config()
   vim.o.termguicolors = true
 
