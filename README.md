@@ -125,7 +125,7 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
 
 # TODO
 
-- [ ] install that plugin which lets you set a specific color scheme per language
+- [ ] install that plugin which lets you set a specific color scheme per language | [link](https://github.com/folke/styler.nvim)
 - [ ] set default theme for `.lua` files to `lunaperche`
   - it's installed by default in vim and looks pretty good for lua
   - makes a good theme for nvim config editing
@@ -139,3 +139,5 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
 - [ ] when a new buffer is opened that isn't already in the buffer list, cleanup old buffers past a certain limit (maybe 25 buffers?)
 - [ ] is there a way to trigger code actions from inside the Trouble window?
 - [ ] could we add a cli argument to lazygit, allowing us to open lazygit from nvim and automatically select the active nvim file in the lazygit file tree?
+- [ ] try out [nvim-pack/nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
+- [ ] try out [edluffy/specs.nvim](https://github.com/edluffy/specs.nvim)
