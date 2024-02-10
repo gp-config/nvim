@@ -123,7 +123,20 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
 
 ---
 
-# TODO
+recent keybinds:
+
+- `<leader>s<right | left>` - swap current argument left or right
+
+---
+
+<details>
+<summary>does not work:</summary>
+- in neovide,
+    - highlighting a bunch of text (e.g. inside "") and pasting from system clipboard `"+p`
+</details>
+
+<details>
+<summary>TODO</summary>
 
 - [ ] install that plugin which lets you set a specific color scheme per language | [link](https://github.com/folke/styler.nvim)
 - [ ] set default theme for `.lua` files to `lunaperche`
@@ -146,8 +159,4 @@ e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.c
 - [ ] use ranger as filebrowser by default, fall back to triptych when not available
   - [ ] or maybe try using that one rustlang ranger-inspired project?
 
----
-
-recent keybinds:
-
-`<leader>s<right | left>` - swap current argument left or right
+</details>
