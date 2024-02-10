@@ -142,8 +142,9 @@ function M.config()
     },
 
     m = {
-      name = "Manage",
-      c = { "<cmd>lua GP_ShowColorMenu()<cr>", "Manage color theme" },
+      name = "Menu",
+      m = { "<cmd>Telescope menu<cr>", "Main Menu" },
+      n = { "<cmd>Telescope menu neovide<cr>", "Neovide Menu" },
     },
   }
 

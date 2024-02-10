@@ -45,5 +45,6 @@ spec "user.obsidian"                      -- obsidian: support obsidian.md vault
 spec "user.persistence"                   -- persistence: auto-save the session on nvim quit -- use this alongside an autocmd to re-open the last session for the current folder on startup!
 spec "user.nvim-treesitter-textobjects"   -- nvim-treesitter-textobjects: select, move, or swap treesitter nodes
 spec "user.firenvim"
+spec "user.telescope-menu"                -- telescope-menu: define custom menus, displayed by telescope
 --
 require "user.lazy"                       -- lazy: plugin management framework - installs every `spec` above
