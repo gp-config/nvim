@@ -16,17 +16,6 @@ local M = {
   },
 }
 function M.config()
-  local devicons = require "nvim-web-devicons"
-
-  devicons.set_icon {
-    astro = {
-      --  󱓟 
-      icon = "󱓞",
-      color = "#FF7E33",
-      name = "astro",
-    },
-  }
-
   require("noice").setup {
     lsp = {
       -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
