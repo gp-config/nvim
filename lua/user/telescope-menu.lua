@@ -19,6 +19,13 @@ function M.config()
             { "Dark Mode", "lua vim.o.background = 'dark'" },
             { "Theme / Colorscheme", "Telescope colorscheme" },
             { "Neovide", "Telescope menu neovide" },
+            { "Format", "Telescope menu format" },
+          },
+        },
+
+        format = {
+          items = {
+            { "Remove all trailing whitespace", "%s/\\s\\+$//e" },
           },
         },
 

@@ -145,6 +145,7 @@ function M.config()
       name = "Menu",
       m = { "<cmd>Telescope menu<cr>", "Main Menu" },
       n = { "<cmd>Telescope menu neovide<cr>", "Neovide Menu" },
+      f = { "<cmd>Telescope menu format<cr>", "Formatting Options" },
     },
   }
 
