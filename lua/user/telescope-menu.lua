@@ -90,6 +90,14 @@ function M.config()
               end,
             },
 
+            {
+              "[md] Berkeley Mono h12 linespace 5",
+              function()
+                vim.opt.guifont = "Berkeley Mono:h12"
+                vim.opt.linespace = 5
+              end,
+            },
+
             -- MARK: [xl]
 
             {
