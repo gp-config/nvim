@@ -17,9 +17,20 @@ function M.config()
             --
             { "Light Mode", "lua vim.o.background = 'light'" },
             { "Dark Mode", "lua vim.o.background = 'dark'" },
-            { "Theme / Colorscheme", "Telescope colorscheme" },
-            { "Neovide", "Telescope menu neovide" },
-            { "Format", "Telescope menu format" },
+            { "SUBMENU: Theme / Colorscheme", "Telescope colorscheme" },
+            { "SUBMENU: Neovide", "Telescope menu neovide" },
+            { "SUBMENU: Format", "Telescope menu format" },
+            { "SUBMENU: Help Tags / User Manual", "Telescope help_tags" },
+
+            { "LSP: Find References", "Telescope lsp_references" },
+            { "LSP: Diagnostics - Warnings and errors for the current buffer", "Telescope Diagnostics" },
+            { "LSP: Rename symbol under cursor", "lua vim.lsp.buf.rename()" },
+            {
+              "LSP: Code Action menu",
+              function()
+                require("actions-preview").code_actions()
+              end,
+            },
           },
         },
 
