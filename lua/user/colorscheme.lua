@@ -10,9 +10,9 @@ local M = {
   -- "gp-themes/oxographene.nvim",
   -- "mcchrish/zenbones.nvim",
   -- dependencies = { "rktjmp/lush.nvim" },
-  -- "catppuccin/nvim",
+  "catppuccin/nvim",
   -- "folke/tokyonight.nvim",
-  "sainnhe/gruvbox-material",
+  -- "sainnhe/gruvbox-material",
   -- "savq/melange-nvim",
   -- "shaunsingh/oxocarbon.nvim",
   -- "sainnhe/everforest",
@@ -62,7 +62,7 @@ function M.config()
   -- Cold background, colorful highlighting with warm pastel colors.
   --
   -- local colorscheme = "catppuccin-latte"     -- light theme (default light bg)
-  -- local colorscheme = "catppuccin-mocha"     -- dark theme, darkest variant (default dark bg)
+  local colorscheme = "catppuccin-mocha"     -- dark theme, darkest variant (default dark bg)
   -- local colorscheme = "catppuccin-macchiato" -- dark theme, medium variant
   -- local colorscheme = "catppuccin-frappe"    -- dark theme, lightest variant
 
@@ -80,7 +80,7 @@ function M.config()
   -- gruvbox material by sainnhe
   -- rustic with vibrant, earthy colors.
   --
-  local colorscheme = "gruvbox-material"     -- supports light/dark
+  -- local colorscheme = "gruvbox-material"     -- supports light/dark
 
   -- THEME:
   -- melange by savq
