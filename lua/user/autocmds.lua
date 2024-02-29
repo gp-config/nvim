@@ -64,5 +64,31 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function()
     vim.lsp.buf.format()
-  end
+  end,
 })
+
+-- vim.api.nvim_create_autocmd({ "WinNew" }, {
+--   callback = function()
+--     -- INFO: WIP
+--     -- WARN: this event doesn't really serve this feature very well!
+--     -- INFO: we need one that runs when the user creates a new split.
+--
+--     -- TODO: count the number of windows that are open
+--     -- TODO: if there are > 0 windows, turn no-neck-pain OFF (left-align both splits)
+--
+--     vim.print("WinNew event fired, num windows: " .. #vim.api.nvim_tabpage_list_wins(0))
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd({ "WinLeave" }, {
+--   callback = function()
+--     -- INFO: WIP
+--     -- WARN: this event doesn't really serve this feature very well!
+--     -- INFO: we need one that runs when the user closes a split.
+--
+--     -- TODO: count the number of windows that are open
+--     -- TODO: if there's exactly 1 window, turn no-neck-pain ON (center the single code view)
+--
+--     vim.print("WinLeave event fired, num windows: " .. #vim.api.nvim_tabpage_list_wins(0))
+--   end,
+-- })
