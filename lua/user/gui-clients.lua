@@ -10,8 +10,8 @@
 -- vim.opt.linespace = 5
 
 -- MARK: [md] Berkeley Mono
--- vim.opt.guifont = "Berkeley Mono:h11"
--- vim.opt.linespace = 0
+vim.opt.guifont = "Berkeley Mono:h11"
+vim.opt.linespace = 0
 -- vim.opt.linespace = 5
 
 -- MARK: [sm] Monaspace Xenon
@@ -19,8 +19,8 @@
 -- vim.opt.linespace = 4
 
 -- MARK: [lg] Monaspace Xenon SemiBold
-vim.opt.guifont = "Monaspace Xenon SemiBold:h11"
-vim.opt.linespace = 8
+-- vim.opt.guifont = "Monaspace Xenon SemiBold:h11"
+-- vim.opt.linespace = 8
 
 -- MARK: [md] Berkeley Mono 12
 -- vim.opt.guifont = "Berkeley Mono:h12"
