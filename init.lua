@@ -46,5 +46,6 @@ spec "user.persistence"                   -- persistence: auto-save the session 
 spec "user.nvim-treesitter-textobjects"   -- nvim-treesitter-textobjects: select, move, or swap treesitter nodes
 spec "user.firenvim"                      -- firenvim: use neovim to edit text boxes on websites (requires a browser extension)
 spec "user.telescope-menu"                -- telescope-menu: define custom menus, displayed by telescope
+spec "user.actions-preview"               -- actions-preview: show LSP code actions in a fancy menu with a preview of each available change
 --
 require "user.lazy"                       -- lazy: plugin management framework - installs every `spec` above
