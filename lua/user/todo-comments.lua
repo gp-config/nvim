@@ -29,14 +29,15 @@
 -- CUSTOM
 ----------------------
 --
--- GP:     for personal comments & attribution
---@GP:     for personal comments & attribution
--- LINK:   for stand-out URL references
--- ASSERT: for stand-out assertion notes
--- DESC:   for 'description' comments in code files ; inline comments that explain a small section of code within a function
--- THEME:  for nice formatting of theme descriptions in `user.colorscheme`
--- UTIL:   for stand-out utility function marking
--- MARK:   swift-style mark comments
+-- GP:         for personal comments & attribution
+--@GP:         for personal comments & attribution
+-- LINK:       for stand-out URL references
+-- ASSERT:     for stand-out assertion notes
+-- DESC:       for 'description' comments in code files ; inline comments that explain a small section of code within a function
+-- THEME:      for nice formatting of theme descriptions in `user.colorscheme`
+-- UTIL:       for stand-out utility function marking
+-- MARK:       swift-style mark comments
+-- HISTORY:    file history markers 
 
 local M = {
   "folke/todo-comments.nvim",
@@ -62,7 +63,7 @@ local M = {
       NOTE = { icon = "󰍨 ", color = "hint" },
       TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 
-      -- NOTE: CUSTOM:
+      -- MARK: CUSTOM:
       THEME = { icon = " ", color = "info" },
       DESC = { icon = "󰍨 ", color = "info", alt = { "INFO" } },
       ASSERT = { icon = "⏲ ", color = "test", alt = { "ASSERTION", "CHECK", "GUARD" } },
@@ -70,6 +71,7 @@ local M = {
       GP = { icon = " ", color = "link" },
       UTIL = { icon = " ", color = "warning" },
       MARK = { icon = " ", color = "warning" },
+      HISTORY = { icon = "󱦺 " },
     },
     colors = {
       error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
