@@ -21,6 +21,7 @@ function M.config()
             { "SUBMENU: Neovide", "Telescope menu neovide" },
             { "SUBMENU: Format", "Telescope menu format" },
             { "SUBMENU: Help Tags / User Manual", "Telescope help_tags" },
+            { "SUBMENU: Diffview", "Telescope menu diffview" },
 
             { "LSP: Find References", "Telescope lsp_references" },
             { "LSP: Diagnostics - Warnings and errors for the current buffer", "Telescope Diagnostics" },
@@ -31,6 +32,8 @@ function M.config()
                 require("actions-preview").code_actions()
               end,
             },
+
+            { "GIT: View git history for current file", "DiffviewFileHistory %" },
           },
         },
 
@@ -40,6 +43,14 @@ function M.config()
           },
         },
 
+        diffview = {
+          items = {
+            { "Close Diffview", "DiffviewClose" },
+            { "Merge Tool", "DiffviewOpen" },
+            { "File History (for the current branch)", "DiffviewFileHistory" },
+            { "File History (for the current file)", "DiffviewFileHistory %" },
+          },
+        },
         neovide = {
           items = {
             { "Change font", "Telescope menu gui_font" },
