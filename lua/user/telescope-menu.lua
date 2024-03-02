@@ -46,6 +46,7 @@ function M.config()
         diffview = {
           items = {
             { "Close Diffview", "DiffviewClose" },
+            { "Open Diffview", "DiffviewOpen" },
             { "Merge Tool", "DiffviewOpen" },
             { "File History (for the current branch)", "DiffviewFileHistory" },
             { "File History (for the current file)", "DiffviewFileHistory %" },
