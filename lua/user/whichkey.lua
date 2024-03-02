@@ -147,6 +147,7 @@ function M.config()
       n = { "<cmd>Telescope menu neovide<cr>", "Neovide Menu" },
       f = { "<cmd>Telescope menu format<cr>", "Formatting Options" },
       h = { "<cmd>Telescope help_tags<cr>", "Help Menu / User Manual search" },
+      d = { "<cmd>Telescope menu diffview<cr>", "Diffview Menu" },
     },
   }
 
