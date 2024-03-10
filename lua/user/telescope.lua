@@ -70,7 +70,7 @@ function M.config()
       buffers = {
         theme = "ivy",
         -- previewer = false,
-        initial_mode = "normal",
+        -- initial_mode = "normal",
         mappings = {
           i = {
             ["<C-d>"] = actions.delete_buffer,
@@ -82,9 +82,8 @@ function M.config()
       },
 
       oldfiles = {
-
         theme = "ivy",
-        initial_mode = "normal",
+        -- initial_mode = "normal",
         -- theme = "dropdown",
         -- previewer = false,
         --
