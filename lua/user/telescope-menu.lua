@@ -34,6 +34,16 @@ function M.config()
             },
 
             { "GIT: View git history for current file", "DiffviewFileHistory %" },
+            {
+              "Toggle cmp",
+              function()
+                -- INFO: toggle the variable
+                vim.g.gp__cmp_disable_enable_toggle = not vim.g.gp__cmp_disable_enable_toggle
+
+                -- INFO: call cmp setup again, so it'll read the new variable
+                require("user.cmp").config()
+              end,
+            },
           },
         },
 
@@ -88,6 +98,15 @@ function M.config()
                 vim.opt.linespace = 5
               end,
             },
+
+            {
+              "[lg][ls-3] Monaspace Xenon:h10",
+              function()
+                vim.opt.guifont = "Monaspace Xenon:h10"
+                vim.opt.linespace = 3
+              end,
+            },
+
             {
               "[md][ls-0] Berkeley Mono:h11",
               function()
@@ -95,6 +114,7 @@ function M.config()
                 vim.opt.linespace = 0
               end,
             },
+
             {
               "[md][ls-5] Berkeley Mono:h11",
               function()
