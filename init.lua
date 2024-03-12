@@ -18,7 +18,8 @@ spec "user.dapui"                         -- dapui: debugger UI
 spec "user.navic"                         -- navic: statusline breadcrumbs UI
 spec "user.trouble"                       -- trouble: diagnostics list UI
 -- spec "user.rnvimr"                        -- DISABLED: trying out triptych for a bit instead -- rnvimr: use ranger as nvim's file browser UI (ranger needs to be installed on the system)
-spec "user.triptych"                      -- triptych: pure lua/nvim implementation of a ranger-style file browser UI
+-- spec "user.triptych"                      -- DISABLED: trying out yazi.nvim instead -- triptych: pure lua/nvim implementation of a ranger-style file browser UI
+spec "user.yazi"                          -- rnvimr: use yazi as nvim's file browser UI (yazi needs to be installed on the system)
 spec "user.navbuddy"                      -- navbuddy: structure navigation UI
 spec "user.lualine"                       -- lualine: statusline UI framework
 spec "user.telescope"                     -- telescope: fuzzy-finder UI framework
