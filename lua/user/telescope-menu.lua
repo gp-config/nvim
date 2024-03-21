@@ -22,6 +22,7 @@ function M.config()
             { "SUBMENU: Format", "Telescope menu format" },
             { "SUBMENU: Help Tags / User Manual", "Telescope help_tags" },
             { "SUBMENU: Diffview", "Telescope menu diffview" },
+            { "Toggle Twilight (code lowlighting / focus mode)", "Twilight" },
 
             { "LSP: Find References", "Telescope lsp_references" },
             { "LSP: Diagnostics - Warnings and errors for the current buffer", "Telescope Diagnostics" },
