@@ -8,15 +8,17 @@ local M = {
   -- Uncomment to pick one
   --
   -- "gp-themes/oxographene.nvim",
-  -- "mcchrish/zenbones.nvim",
-  -- dependencies = { "rktjmp/lush.nvim" },
-  "catppuccin/nvim",
+  -- "catppuccin/nvim",
   -- "folke/tokyonight.nvim",
   -- "sainnhe/gruvbox-material",
   -- "savq/melange-nvim",
   -- "shaunsingh/oxocarbon.nvim",
   -- "sainnhe/everforest",
   -- "lunarvim/darkplus.nvim",
+  --
+  "mcchrish/zenbones.nvim",
+  dependencies = { "rktjmp/lush.nvim" },
+  --
 
   --
   lazy = false,
@@ -46,7 +48,7 @@ function M.config()
   --
   -- local colorscheme = "randombones"          -- picks a random zenbones theme --
   -- local colorscheme = "zenbones"             -- supports light/dark --
-  -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
+  local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
   -- local colorscheme = "rosebones"             -- supports light/dark -- rosey colors, dark variant has blue bg
@@ -62,7 +64,7 @@ function M.config()
   -- Cold background, colorful highlighting with warm pastel colors.
   --
   -- local colorscheme = "catppuccin-latte"     -- light theme (default light bg)
-  local colorscheme = "catppuccin-mocha"     -- dark theme, darkest variant (default dark bg)
+  -- local colorscheme = "catppuccin-mocha"     -- dark theme, darkest variant (default dark bg)
   -- local colorscheme = "catppuccin-macchiato" -- dark theme, medium variant
   -- local colorscheme = "catppuccin-frappe"    -- dark theme, lightest variant
 
