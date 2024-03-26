@@ -166,3 +166,5 @@ keymap("n", "<leader>a", "<cmd>Navbuddy<cr>", opts) -- toggle symbols panel (aer
 -- 4$
 -- keymap("n", "<leader>4", "<cmd> lua require'harpoon.ui'.nav_file(4)<cr>", opts)
 -- keymap("n", "<leader>h4", "<cmd> lua require'harpoon.mark'.add_current_file(4)<cr>", opts)
+
+keymap("n", "<C-CR>", "lua cmp.complete({reason = cmp.ContextReason.Auto})", opts)
