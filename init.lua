@@ -48,5 +48,6 @@ spec "user.nvim-treesitter-textobjects"   -- nvim-treesitter-textobjects: select
 spec "user.firenvim"                      -- firenvim: use neovim to edit text boxes on websites (requires a browser extension)
 spec "user.telescope-menu"                -- telescope-menu: define custom menus, displayed by telescope
 spec "user.actions-preview"               -- actions-preview: show LSP code actions in a fancy menu with a preview of each available change
+spec "user.mini"                          -- mini: a collection of utils and tools 
 --
 require "user.lazy"                       -- lazy: plugin management framework - installs every `spec` above
