@@ -1,17 +1,17 @@
 -- use this font for all GUI clients
 
 -- MARK: [md] JetBrains Mono
--- vim.opt.guifont = "JetBrains Mono:h11"
+vim.opt.guifont = "JetBrains Mono:h11"
 -- vim.opt.linespace = 0
--- vim.opt.linespace = 5
+vim.opt.linespace = 5
 
 -- MARK: [xl] JetBrains Mono
 -- vim.opt.guifont = "JetBrains Mono SemiBold:h13"
 -- vim.opt.linespace = 5
 
 -- MARK: [md] Berkeley Mono
-vim.opt.guifont = "Berkeley Mono:h11"
-vim.opt.linespace = 0
+-- vim.opt.guifont = "Berkeley Mono:h11"
+-- vim.opt.linespace = 0
 -- vim.opt.linespace = 5
 
 -- MARK: [sm] Monaspace Xenon
