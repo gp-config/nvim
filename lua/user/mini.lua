@@ -12,6 +12,10 @@ function M.config()
   -- DESC: mini-bracketed
   --       various ways to navigate forwards/backwards using square brackets as a leader key
   require("mini.bracketed").setup()
+
+  -- DESC: mini-indentscope
+  --       visualize the current scope with an animated vertical line
+  require("mini.indentscope").setup()
 end
 
 return M
