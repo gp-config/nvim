@@ -156,7 +156,8 @@ recent keybinds:
 - [ ] try out [edluffy/specs.nvim](https://github.com/edluffy/specs.nvim)
 - [ ] re-add [lspkind](https://github.com/onsails/lspkind.nvim) to cmp
 - [ ] try out [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
-- [ ] use ranger as filebrowser by default, fall back to triptych when not available
-  - [ ] or maybe try using that one rustlang ranger-inspired project?
+- [ ] use ~~ranger~~ yazi as filebrowser by default, but fall back to triptych when not available
+- [ ] try mini.completion instead of nvim-cmp
+  - it seems to have debounce settings out of the box, and may be async? (cmp doesn't really feel like it's async)
 
 </details>
