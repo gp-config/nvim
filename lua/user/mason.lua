@@ -19,7 +19,8 @@ M.servers = {
   "yamlls",
   "marksman",
   "tailwindcss",
-  "elixirls",
+  -- "elixirls", # trying lexical instead
+  "lexical",
   "rust_analyzer",
 }
 

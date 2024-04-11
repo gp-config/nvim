@@ -62,7 +62,8 @@ function M.config()
     "yamlls",
     "marksman",
     "tailwindcss",
-    "elixirls",
+    -- "elixirls", # trying lexical instead
+    "lexical",
     "rust_analyzer",
     "svelte",
   } -- put the language you want in this table
