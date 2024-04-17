@@ -35,7 +35,11 @@ function M.config()
               end,
             },
 
-            { "GIT: View git history for current file", "DiffviewFileHistory %" },
+            -- WARN: this block of commands is also in the `diffview` sub-menu!
+            { "GIT: File History (for the current file)", "DiffviewFileHistory %" },
+            { "GIT: File History (for the current branch)", "DiffviewFileHistory" },
+            { "GIT: File History (for the current line)", ".DiffviewFileHistory --follow" },
+
             {
               "Toggle cmp",
               function()
@@ -60,8 +64,11 @@ function M.config()
             { "Close Diffview", "DiffviewClose" },
             { "Open Diffview", "DiffviewOpen" },
             { "Merge Tool", "DiffviewOpen" },
+
+            -- WARN: this block of commands is also in the main menu!
             { "File History (for the current branch)", "DiffviewFileHistory" },
             { "File History (for the current file)", "DiffviewFileHistory %" },
+            { "File History (for the current line)", ".DiffviewFileHistory --follow" },
           },
         },
         neovide = {
