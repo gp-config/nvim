@@ -42,6 +42,16 @@ Sometimes those plugin modules also have a `setup` method associated with them, 
 
 ---
 
+### #HOWTO: Reset configuration
+
+here's how to clear out the nvim config cache, re-installing and re-configuring all plugins
+
+1. Delete `~/.local/share/nvim`
+
+2. Open neovim
+
+At this point, `lazy.nvim` should install all plugins, and `Mason` should begin downloading all LSP servers, formatters, etc.
+
 ### #HOWTO: Install a new LSP server
 
 here's how to install e.g. `astro`;
