@@ -242,7 +242,7 @@ function M.config()
       select = false,
     },
     performance = {
-      debounce = 1000, -- NOTE: added debounce here which works nicely, but the debounce applies also to a manual trigger with <C-CR> ; not ideal!
+      -- debounce = 1000, -- NOTE: added debounce here which works nicely, but the debounce applies also to a manual trigger with <C-CR> ; not ideal!
     },
     window = {
       ---@diagnostic disable-next-line: missing-fields
