@@ -20,7 +20,7 @@ M.servers = {
   "marksman",
   "tailwindcss",
   -- "elixirls", # trying lexical instead
-  "lexical",
+  -- "lexical", # this is configured manually in lspconfig # TODO: clean this up? not sure how just yet
   "rust_analyzer",
 }
 

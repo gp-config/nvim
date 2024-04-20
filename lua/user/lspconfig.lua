@@ -1,7 +1,7 @@
 local M = {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
-  commit = "e49b1e90c1781ce372013de3fa93a91ea29fc34a",
+  commit = "9266dc26862d8f3556c2ca77602e811472b4c5b8",
   dependencies = {
     {
       "folke/neodev.nvim",
@@ -50,23 +50,25 @@ function M.config()
   local lspconfig = require "lspconfig"
   local icons = require "user.icons"
 
-  local ensure_installed = {
-    "lua_ls",
-    "cssls",
-    "html",
-    "tsserver",
-    "astro",
-    "pyright",
-    "bashls",
-    "jsonls",
-    "yamlls",
-    "marksman",
-    "tailwindcss",
-    -- "elixirls", # trying lexical instead
-    "lexical",
-    "rust_analyzer",
-    "svelte",
-  } -- put the language you want in this table
+  local ensure_installed = require("user.mason").servers
+
+  -- local ensure_installed = {
+  --   "lua_ls",
+  --   "cssls",
+  --   "html",
+  --   "tsserver",
+  --   "astro",
+  --   "pyright",
+  --   "bashls",
+  --   "jsonls",
+  --   "yamlls",
+  --   "marksman",
+  --   "tailwindcss",
+  --   -- "elixirls", # trying lexical instead
+  --   -- "lexical",
+  --   "rust_analyzer",
+  --   "svelte",
+  -- } -- put the language you want in this table
 
   local default_diagnostic_config = {
     signs = {
@@ -119,6 +121,30 @@ function M.config()
 
     lspconfig[server].setup(opts)
   end
+
+  -- SECTION: lexical-specific setup
+  local configs = require "lspconfig.configs"
+
+  local lexical_config = {
+    filetypes = { "elixir", "eelixir", "heex" },
+    cmd = { "/home/gp/github/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
+    settings = {},
+  }
+
+  if not configs.lexical then
+    configs.lexical = {
+      default_config = {
+        filetypes = lexical_config.filetypes,
+        cmd = lexical_config.cmd,
+        root_dir = function(fname)
+          return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
+        end,
+        -- optional settings
+        settings = lexical_config.settings,
+      },
+    }
+  end
+  lspconfig.lexical.setup {}
 end
 
 return M

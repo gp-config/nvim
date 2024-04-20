@@ -6,14 +6,13 @@ require "user.keymaps"                    -- basic key bindings (there's more ke
 require "user.autocmds"                   -- vim auto-commands (vim.api.nvim_create_autocmd)
 --
 spec "user.colorscheme"                   -- colors!
-spec "user.devicons"                      -- icons!
+spec "user.mason"                         -- mason: package manager UI
 spec "user.treesitter"                    -- treesitter: syntax highlighting engine
 spec "user.lspconfig"                     -- lspconfig: language servers
 spec "user.cmp"                           -- cmp: completion engine
 spec "user.dap"                           -- dap: debugger engine
 spec "user.dapinstall"                    -- dapinstall: installer for debug servers
 spec "user.noice"                         -- noice: experimental vim command line & messages UI
-spec "user.mason"                         -- mason: package manager UI
 spec "user.dapui"                         -- dapui: debugger UI
 spec "user.navic"                         -- navic: statusline breadcrumbs UI
 spec "user.trouble"                       -- trouble: diagnostics list UI
@@ -31,6 +30,7 @@ spec "user.null-ls"                       -- null-ls: direct API for LSPs. often
 spec "user.illuminate"                    -- illuminate: highlight other occurrences of the word under your cursor
 spec "user.autopairs"                     -- autopairs: auto-close brackets etc
 spec "user.comment"                       -- comment: smart commenting
+spec "user.devicons"                      -- icons!
 spec "user.gitsigns"                      -- gitsigns: gutter decorations indicating git status
 -- spec "user.indentline"                    -- DISABLED: preferring clean look rn -- indentline: indent guides / indent lines
 spec "user.bufdelete"                     -- bufdelete: alternative buffer deletion
@@ -45,7 +45,7 @@ spec "user.twilight"                      -- twilight: lowlight code that's far 
 spec "user.obsidian"                      -- obsidian: support obsidian.md vaults
 spec "user.persistence"                   -- persistence: auto-save the session on nvim quit -- use this alongside an autocmd to re-open the last session for the current folder on startup!
 spec "user.nvim-treesitter-textobjects"   -- nvim-treesitter-textobjects: select, move, or swap treesitter nodes
-spec "user.firenvim"                      -- firenvim: use neovim to edit text boxes on websites (requires a browser extension)
+-- spec "user.firenvim"                      -- firenvim: use neovim to edit text boxes on websites (requires a browser extension)
 spec "user.telescope-menu"                -- telescope-menu: define custom menus, displayed by telescope
 spec "user.actions-preview"               -- actions-preview: show LSP code actions in a fancy menu with a preview of each available change
 spec "user.mini"                          -- mini: a collection of utils and tools 
