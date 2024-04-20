@@ -36,6 +36,7 @@ function M.config()
             },
 
             -- WARN: this block of commands is also in the `diffview` sub-menu!
+            { "Close Diffview", "DiffviewClose" },
             { "GIT: File History (for the current file)", "DiffviewFileHistory %" },
             { "GIT: File History (for the current branch)", "DiffviewFileHistory" },
             { "GIT: File History (for the current line)", ".DiffviewFileHistory --follow" },
