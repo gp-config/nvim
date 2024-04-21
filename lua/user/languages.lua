@@ -2,7 +2,7 @@ local M = {}
 
 local languages = {
   { treesitter = "lua", lsp = "lua_ls" },
-  { lsp = "cssls" },
+  { treesitter = "css", lsp = "cssls" },
   { lsp = "html" },
   { lsp = "tsserver" },
   { treesitter = "astro", lsp = "astro" },
@@ -11,7 +11,6 @@ local languages = {
   { lsp = "jsonls" },
   { lsp = "yamlls" },
   { treesitter = "markdown", lsp = "marksman" },
-  { treesitter = "markdown-inline" },
   { lsp = "tailwindcss" },
   { treesitter = "elixir", lsp = "lexical" },
   { treesitter = "eex" },
@@ -23,13 +22,14 @@ local languages = {
 M.to_install_treesitter = {}
 M.to_install_lsp = {}
 
-for value in languages do
-  if value.lsp then
-    table.insert(M.to_install_lsp, value)
+for _, value in ipairs(languages) do
+  if value.lsp ~= nil then
+    table.insert(M.to_install_lsp, value.lsp)
   end
 
-  if value.treesitter then
-    table.insert(M.to_install_treesitter, value)
+  if value.treesitter ~= nil then
+    vim.print(value.treesitter)
+    table.insert(M.to_install_treesitter, value.treesitter)
   end
 end
 
