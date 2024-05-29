@@ -11,8 +11,16 @@ local M = {
     label = {
       rainbow = {
         enabled = true,
-        -- shade = 2 -- number between 1 (light) and 9 (dark)
-        shade = 5, -- number between 1 (light) and 9 (dark)
+        -- shade = number between 1 (light) and 9 (dark)
+        -- shade = 1,
+        -- shade = 2,
+        shade = 3,
+        -- shade = 4,
+        -- shade = 5,
+        -- shade = 6,
+        -- shade = 7,
+        -- shade = 8,
+        -- shade = 9,
       },
     },
   },
