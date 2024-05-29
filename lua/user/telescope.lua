@@ -135,7 +135,16 @@ function M.config()
         override_file_sorter = true, -- override the file sorter
         case_mode = "smart_case", -- or "ignore_case" or "respect_case"
       },
-      undo = {},
+      undo = {
+        -- INFO: use_delta = false will DISABLE using the `delta` diff viewer. delta seems to look bad in light mode.
+        use_delta = false,
+        -- INFO: the side-by-side diff options below look great, but require use_delta = true; disabling for now
+        -- side_by_side = true,
+        -- layout_strategy = "vertical",
+        -- layout_config = {
+        --   preview_height = 0.8,
+        -- },
+      },
     },
   }
 
