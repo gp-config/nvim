@@ -47,14 +47,45 @@ Sometimes those plugin modules also have a `setup` method associated with them, 
 here's how to clear out the nvim config cache, re-installing and re-configuring all plugins
 
 1. Delete `~/.local/share/nvim`
+    - (or back it up; `mv ~/.local/share/nvim ~/.local/share/nvim-bkp`)
 
 2. Open neovim
 
-At this point, `lazy.nvim` should install all plugins, and `Mason` should begin downloading all LSP servers, formatters, etc.
+at this point, `lazy.nvim` should install all plugins. Once it's done, close and re-open neovim. `Mason` should begin downloading all LSP servers, formatters, etc. Once that is done, the editor should be fully set up.
 
-### #HOWTO: Install a new LSP server
+- you can check what `lazy.nvim` has installed by running the command `:Lazy`
 
-here's how to install e.g. `astro`;
+- you can check what `Mason` has installed by running the command `:Mason`
+
+- you can check what treesitters are installed by running the command `:TSInstallInfo`
+
+### #HOWTO: Add support for a language to the default configuration
+
+here's how to ensure that nvim will install an LSP server and/or treesitter grammar on startup (if they're not already installed)
+
+- open the `user/languages.lua` file
+- add a table to the `languages` table, specifying the LSP and treesitter keys you'd like to install.
+
+NOTE: see all the supported treesitter languages [here](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages)
+NOTE: see all the supported language servers [here](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers)
+e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) and [withastro/language-tools](https://github.com/withastro/language-tools)
+
+1. add the following line to `user/languages.lua`
+
+```diff
+  local languages = {
+    ...
++   { treesitter = "astro", lsp = "astro" },
+  
+  }
+```
+
+2. restart neovim
+
+
+### #HOWTO: Install a one-off LSP server
+
+here's how to install e.g. `astro` as a 'one-off' (i.e. only on this computer; it won't auto-install as part of the nvim configuration);
 
 1. Run `mason`
 
@@ -68,67 +99,15 @@ here's how to install e.g. `astro`;
 
 4. Press `i` to install the language server
 
-### #HOWTO: Add an LSP to the default configuration
 
-here's how to ensure that nvim will install an LSP server on startup (if it's not already installed)
+### #HOWTO: Install a one-off tree-sitter grammar
 
-- open the `user/lspconfig.lua` file
-- find the `ensure_installed` block
-- add a line for the LSP
-
-e.g. adding astro - this installs [withastro/language-tools](https://github.com/withastro/language-tools)
-
-```diff
-  local ensure_installed = {
-    "lua_ls",
-    "cssls",
-    "html",
-    "tsserver",
-+   "astro",
-    "pyright",
-    "bashls",
-    "jsonls",
-    "yamlls",
-    "marksman",
-    "tailwindcss",
-    "elixirls",
-    "rust_analyzer",
-  } -- put the language you want in this table
-```
-
-### #HOWTO: Install a new tree-sitter grammar
-
-here's how to install e.g. `astro`;
+here's how to install e.g. `astro` as a 'one-off' (i.e. only on this computer; it won't auto-install as part of the nvim configuration);
 
 this installs [virchau13/tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) using the `TSInstall` command.
 
 ```
 :TSInstall astro
-```
-
-### #HOWTO: Add a tree-sitter grammar to the default configuration
-
-here's how to ensure that nvim will install a tree-sitter grammar on startup (if it's not already installed)
-
-- open the `user/treesitter.lua` file
-- find the `ensure_installed` block
-- add a line for the grammar
-
-e.g. adding astro - this installs [virchau13/tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro)
-
-```diff
-  ensure_installed = {
-    "lua",
-    "markdown",
-    "markdown_inline",
-    "bash",
-    "python",
-    "rust",
-    "elixir",
-    "heex",
-    "eex",
-+   "astro",
-  }, -- put the language you want in this table
 ```
 
 ---
