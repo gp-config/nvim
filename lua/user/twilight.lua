@@ -19,7 +19,7 @@ local M = {
       "if_statement",
     },
     exclude = {}, -- exclude these filetypes
-  }
+  },
 }
 
 function M.config()

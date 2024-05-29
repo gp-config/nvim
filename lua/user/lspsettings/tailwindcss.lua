@@ -3,7 +3,7 @@ return {
     "html",
     "elixir",
     "eelixir",
-    "heex"
+    "heex",
   },
   init_options = {
     elixir = "html-eex",
@@ -14,9 +14,9 @@ return {
     tailwindCSS = {
       experimental = {
         classRegex = {
-          'class[:]\\s*"([^"]*)"'
-        }
-      }
-    }
+          'class[:]\\s*"([^"]*)"',
+        },
+      },
+    },
   },
 }
