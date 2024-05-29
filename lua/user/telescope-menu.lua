@@ -80,87 +80,12 @@ function M.config()
           },
         },
 
-        gui_font = {
+        -- NOTE: import
+        gui_font = require("user.gui-clients").gui_font_options or {
           items = {
-
-            -- MARK: [sm]
-
             {
-              "[sm][ls-4] Monaspace Xenon:h9",
-              function()
-                vim.opt.guifont = "Monaspace Xenon:h9"
-                vim.opt.linespace = 4
-              end,
-            },
-            {
-              "[sm][ls-0] Berkeley Mono:h9",
-              function()
-                vim.opt.guifont = "Berkeley Mono:h9"
-                vim.opt.linespace = 0
-              end,
-            },
-
-            -- MARK: [md]
-
-            {
-              "[md][ls-5] JetBrains Mono:h11",
-              function()
-                vim.opt.guifont = "JetBrains Mono:h11"
-                -- vim.opt.linespace = 0
-                vim.opt.linespace = 5
-              end,
-            },
-
-            {
-              "[lg][ls-3] Monaspace Xenon:h10",
-              function()
-                vim.opt.guifont = "Monaspace Xenon:h10"
-                vim.opt.linespace = 3
-              end,
-            },
-
-            {
-              "[md][ls-0] Berkeley Mono:h11",
-              function()
-                vim.opt.guifont = "Berkeley Mono:h11"
-                vim.opt.linespace = 0
-              end,
-            },
-
-            {
-              "[md][ls-5] Berkeley Mono:h11",
-              function()
-                vim.opt.guifont = "Berkeley Mono:h11"
-                vim.opt.linespace = 5
-              end,
-            },
-
-            -- MARK: [lg]
-
-            {
-              "[lg][ls-8] Monaspace Xenon SemiBold:h11",
-              function()
-                vim.opt.guifont = "Monaspace Xenon SemiBold:h11"
-                vim.opt.linespace = 8
-              end,
-            },
-
-            {
-              "[md][ls-5] Berkeley Mono:h12",
-              function()
-                vim.opt.guifont = "Berkeley Mono:h12"
-                vim.opt.linespace = 5
-              end,
-            },
-
-            -- MARK: [xl]
-
-            {
-              "[xl][ls-8] Monaspace Xenon SemiBold:h13",
-              function()
-                vim.opt.guifont = "Monaspace Xenon SemiBold:h13"
-                vim.opt.linespace = 8
-              end,
+              "This does not appear to be a GUI client, so there are no font options here.",
+              "echo",
             },
           },
         },
