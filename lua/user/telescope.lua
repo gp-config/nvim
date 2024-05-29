@@ -1,6 +1,10 @@
 local M = {
   "nvim-telescope/telescope.nvim",
-  dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true } },
+  -- TODO: can we specify a specific commit of each dependency to use?
+  dependencies = {
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
+    "debugloop/telescope-undo.nvim",
+  },
   commit = "74ce793a60759e3db0d265174f137fb627430355",
   lazy = true,
   cmd = "Telescope",
@@ -131,8 +135,11 @@ function M.config()
         override_file_sorter = true, -- override the file sorter
         case_mode = "smart_case", -- or "ignore_case" or "respect_case"
       },
+      undo = {},
     },
   }
+
+  require("telescope").load_extension "undo"
 
   --- telescope global search for highlighted text
   --- thanks to: adoyle-h on github https://github.com/nvim-telescope/telescope.nvim/issues/1923#issuecomment-1122642431
