@@ -24,7 +24,9 @@ function M.config()
             { "SUBMENU: Diffview", "Telescope menu diffview" },
             { "Toggle Twilight (code lowlighting / focus mode)", "Twilight" },
             { "TreeSitter: InspectTree", "InspectTree" },
+            { "Undo/Redo History for current buffer", "Telescope undo" },
 
+            { "LspInfo", "LspInfo" },
             { "LSP: Find References / Usages", "Telescope lsp_references" },
             { "LSP: Diagnostics - Warnings and errors for the current buffer", "Telescope Diagnostics" },
             { "LSP: Rename symbol under cursor", "lua vim.lsp.buf.rename()" },
