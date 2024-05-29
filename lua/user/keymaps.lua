@@ -100,9 +100,12 @@ keymap("v", ">", ">gv", opts)
 -- Toggle search highlighting on/off with <Leader>x
 vim.cmd [[:nnoremap <silent><expr> <Leader>x (&hls && v:hlsearch ? ':set nohls' : ':set hls')."\n"]]
 
--- Paste-and-replace without yanking in visual & visual block mode
-keymap("x", "p", [["_dP]])
-keymap("v", "p", [["_dP]])
+-- Paste-and-replace without yanking in visual & visual block mode...
+keymap("x", [[p]], [["_dP]])
+keymap("v", [[p]], [["_dP]])
+-- ...EXCEPT for global register +
+keymap("x", [["+p]], [["+p]])
+keymap("v", [["+p]], [["+p]])
 
 -- LSP
 -- Find additional LSP keybinds in `lspconfig.lua # lsp_keymaps()`
