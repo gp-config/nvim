@@ -3,6 +3,8 @@ local M = {
   event = { "BufReadPre", "BufNewFile" },
   commit = "9266dc26862d8f3556c2ca77602e811472b4c5b8",
   dependencies = {
+    "williamboman/mason.nvim", -- NOTE: this is set up in a different file `user.mason`. it's just here for redundancy, since mason-lspconfig needs it.
+    "williamboman/mason-lspconfig.nvim", -- NOTE: this is what automatically installs all configured LSPs.
     {
       "folke/neodev.nvim",
       commit = "b094a663ccb71733543d8254b988e6bebdbdaca4",
@@ -47,28 +49,13 @@ function M.common_capabilities()
 end
 
 function M.config()
+  require("mason-lspconfig").setup {
+    automatic_installation = true,
+  }
+
+  local ensure_installed = require("user.languages").to_install_lsp
   local lspconfig = require "lspconfig"
   local icons = require "user.icons"
-
-  local ensure_installed = require("user.mason").servers
-
-  -- local ensure_installed = {
-  --   "lua_ls",
-  --   "cssls",
-  --   "html",
-  --   "tsserver",
-  --   "astro",
-  --   "pyright",
-  --   "bashls",
-  --   "jsonls",
-  --   "yamlls",
-  --   "marksman",
-  --   "tailwindcss",
-  --   -- "elixirls", # trying lexical instead
-  --   -- "lexical",
-  --   "rust_analyzer",
-  --   "svelte",
-  -- } -- put the language you want in this table
 
   local default_diagnostic_config = {
     signs = {
@@ -122,12 +109,12 @@ function M.config()
     lspconfig[server].setup(opts)
   end
 
-  -- SECTION: lexical-specific setup
+  -- SECTION: lexical (elixir language server) setup
   local configs = require "lspconfig.configs"
 
   local lexical_config = {
     filetypes = { "elixir", "eelixir", "heex" },
-    cmd = { "/home/gp/github/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
+    cmd = { "/home/gp/github/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh" }, -- DANGER: hardcoded path here!
     settings = {},
   }
 
@@ -145,6 +132,7 @@ function M.config()
     }
   end
   lspconfig.lexical.setup {}
+  -- END: lexical (elixir language server) setup
 end
 
 return M

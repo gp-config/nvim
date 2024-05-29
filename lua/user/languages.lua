@@ -2,29 +2,31 @@
 local M = {}
 
 local languages = {
-  lua        = { treesitter = "lua",        lsp = "lua_ls"        },
-  css        = { treesitter = "css",        lsp = "cssls"         },
-  tailwind   = {                            lsp = "tailwindcss"   },
-  html       = { treesitter = "html",       lsp = "html"          },
-  typescript = { treesitter = "typescript", lsp = "tsserver"      },
-  astro      = { treesitter = "astro",      lsp = "astro"         },
-  python     = { treesitter = "python",     lsp = "pyright"       },
-  bash       = { treesitter = "bash",       lsp = "bashls"        },
-  json5      = { treesitter = "json5",      lsp = "jsonls"        },
-  json       = { treesitter = "json"                              },
-  yaml       = { treesitter = "yaml",       lsp = "yamlls"        },
-  markdown   = { treesitter = "markdown",   lsp = "marksman"      },
-  elixir     = { treesitter = "elixir",     lsp = "elixirls"      },
-  eex        = { treesitter = "eex"                               },
-  heex       = { treesitter = "heex"                              },
-  rust       = { treesitter = "rust",       lsp = "rust_analyzer" },
-  svelte     = { treesitter = "svelte",     lsp = "svelte"        },
+
+  { treesitter = "lua",        lsp = "lua_ls"        },
+  { treesitter = "css",        lsp = "cssls"         },
+  {                            lsp = "tailwindcss"   },
+  { treesitter = "html",       lsp = "html"          },
+  { treesitter = "typescript", lsp = "tsserver"      },
+  { treesitter = "astro",      lsp = "astro"         },
+  { treesitter = "python",     lsp = "pyright"       },
+  { treesitter = "bash",       lsp = "bashls"        },
+  { treesitter = "json5",      lsp = "jsonls"        },
+  { treesitter = "json"                              },
+  { treesitter = "yaml",       lsp = "yamlls"        },
+  { treesitter = "markdown",   lsp = "marksman"      },
+  { treesitter = "elixir"                            }, -- INFO: lexical is the elixir LS in use. it's installed manually on my system, and set up separately in `user.lspconfig`.
+  { treesitter = "eex"                               },
+  { treesitter = "heex"                              },
+  { treesitter = "rust",       lsp = "rust_analyzer" },
+  { treesitter = "svelte",     lsp = "svelte"        },
+  { treesitter = "fish",                             },
+  { treesitter = "c_sharp",    lsp = "csharp_ls"     },
+
 }
--- NOTE: to align this languages table, use mini-align
+-- NOTE: to align this languages table above, use mini-align
 --       - select the table in visual mode.
---       - `gas` to enter mini-align split mode. split on the term "= {".
---       - `gv` to re-select the last selection.
---       - `gas` to enter mini-align split mode. split on the term "lsp".
+--       - `gas` to enter mini-align split mode. split on the term "lsp =".
 --       - `gv` to re-select the last selection.
 --       - `gas` to enter mini-align split mode. split on the term "}".
 
