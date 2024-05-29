@@ -11,6 +11,7 @@
 -- FIXIT:
 -- ISSUE:
 -- TODO:
+-- DANGER:
 -- HACK:
 -- WARN:
 -- WARNING:
@@ -54,7 +55,7 @@ local M = {
         color = "error",  -- can be a hex color, or a named color (see below)
         -- signs = false, -- configure signs for some keywords individually
         alt = {           -- a set of other keywords that all map to this FIX keywords
-          "FIXME", "BUG", "FIXIT", "ISSUE"
+          "FIXME", "BUG", "FIXIT", "ISSUE", "DANGER"
         },
 
       },
