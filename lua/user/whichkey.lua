@@ -67,6 +67,7 @@ function M.config()
       k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
       C = { "<cmd>Telescope commands<cr>", "Commands" },
       p = { "<cmd>Telescope planets<cr>", "Look through the Telescope :)" },
+      u = { "<cmd>Telescope undo<cr>", "Undo/Redo History for current buffer" },
     },
 
     g = {
