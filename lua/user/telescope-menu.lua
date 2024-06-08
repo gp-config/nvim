@@ -25,6 +25,7 @@ function M.config()
             { "Toggle Twilight (code lowlighting / focus mode)", "Twilight" },
             { "TreeSitter: InspectTree", "InspectTree" },
             { "Undo/Redo History for current buffer", "Telescope undo" },
+            { "Jumplist History", "Telescope jumplist" },
 
             { "LspInfo", "LspInfo" },
             { "LSP: Find References / Usages", "Telescope lsp_references" },
