@@ -62,12 +62,17 @@ function M.config()
       -- i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" }, -- requires installation of an extension to work
       l = { "<cmd>Telescope resume<cr>", "Last Search" },
       M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-      r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+
+      r = { "<cmd>Telescope lsp_references<cr>", "References" },
+      -- r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+      o = { "<cmd>Telescope oldfiles<cr>", "Oldfiles (Recent File)" },
+
       R = { "<cmd>Telescope registers<cr>", "Registers" },
       k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
       C = { "<cmd>Telescope commands<cr>", "Commands" },
       p = { "<cmd>Telescope planets<cr>", "Look through the Telescope :)" },
       u = { "<cmd>Telescope undo<cr>", "Undo/Redo History for current buffer" },
+      j = { "<cmd>Telescope jumplist<cr>", "Jumplist History" },
     },
 
     g = {
