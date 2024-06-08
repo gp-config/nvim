@@ -60,6 +60,10 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "}", "")
 keymap("n", "{", "")
 
+-- NOTE: quickfix list navigation
+keymap("n", "}}", "<cmd>cnext<cr>")
+keymap("n", "{{", "<cmd>cprev<cr>")
+
 -- NOTE: favor movement style:
 --       pageup & pagedown:
 keymap("n", "<C-d>", "<C-d>zz")
