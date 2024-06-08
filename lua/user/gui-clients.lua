@@ -111,14 +111,22 @@ local gui_font_options = {
     },
     -- INFO: FONT_INDEX: 9
     {
-      "[md][ls-5] Berkeley Mono:h12",
+      "[lg][ls-5] Berkeley Mono:h12",
       function()
         vim.opt.guifont = "Berkeley Mono:h12"
         vim.opt.linespace = 5
       end,
     },
-    -- SECTION: [xl]
     -- INFO: FONT_INDEX: 10
+    {
+      "[lg][ls-0] Berkeley Mono:h12",
+      function()
+        vim.opt.guifont = "Berkeley Mono:h12"
+        vim.opt.linespace = 0
+      end,
+    },
+    -- SECTION: [xl]
+    -- INFO: FONT_INDEX: 11
     {
       "[xl][ls-8] Monaspace Xenon SemiBold:h13",
       function()
