@@ -1,6 +1,4 @@
 --stylua: ignore start
-local M = {}
-
 local languages = {
 
   { treesitter = "lua",        lsp = "lua_ls"        },
@@ -30,14 +28,20 @@ local languages = {
 --       - `gv` to re-select the last selection.
 --       - `gas` to enter mini-align split mode. split on the term "}".
 
-M.to_install_treesitter = {}
-M.to_install_lsp = {}
+local M = {
+  to_install_treesitter = {},
+  to_install_lsp = {},
+}
 
 for _, value in ipairs(languages) do
+  -- INFO: handle `lsp`, if it's provided.
+  --       lsps are used by `lua/user/lspconfig.lua`
   if value.lsp ~= nil then
     table.insert(M.to_install_lsp, value.lsp)
   end
 
+  -- INFO: handle `treesitter`, if it's provided
+  --       treesitters are used by `lua/user/treesitter.lua`
   if value.treesitter ~= nil then
     table.insert(M.to_install_treesitter, value.treesitter)
   end
