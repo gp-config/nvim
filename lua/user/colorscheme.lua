@@ -1,6 +1,10 @@
 --stylua: ignore start
 require "user.launch"
 
+local function colorscheme_is_already_set(colorscheme)
+  return vim.g.colors_name == colorscheme
+end
+
 local function set_colorscheme(colorscheme)
   local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
   if not status_ok then
@@ -16,6 +20,14 @@ local function define_language_colors(opts)
   vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
     pattern = opts.filetype,
     callback = function()
+
+      -- INFO: bail out if we're already using one of the correct themes
+      if colorscheme_is_already_set(opts.litemode) then
+        return
+      end
+      if colorscheme_is_already_set(opts.darkmode) then
+        return
+      end
 
       -- INFO: call the `before` callback if its defined;
       --       it's for writing additional theme setup code before setting the color scheme.
