@@ -16,6 +16,8 @@ end
 --       when it runs, it will set the current color scheme.
 local function define_language_colors(opts)
   local todocomments = require("todo-comments.init")
+  local todocomments_config = require("todo-comments.config")
+  local todocomments_opts = require("user.todo-comments").opts
 
   vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
     pattern = opts.filetype,
@@ -47,7 +49,8 @@ local function define_language_colors(opts)
       -- BUGFIX: setting the colorscheme messes up todo-comments (highlighting gets disabled),
       --         so we reset it here any time we're changing themes.
       if todocomments then
-        todocomments.reset()
+        -- todocomments.reset() -- actually this on its own gets rid of our custom options, use config.setup instead. keeping this line here for now in case its needed in the future.
+        todocomments_config.setup(todocomments_opts)
       end
 
       -- INFO: call the `after` callback if its defined
@@ -71,6 +74,8 @@ local M = {
     "sainnhe/everforest",
     "lunarvim/darkplus.nvim",
     "mcchrish/zenbones.nvim",
+    "xero/miasma.nvim",
+    "AlexvZyl/nordic.nvim",
   },
 
   lazy = false,
@@ -102,7 +107,7 @@ function M.config()
   -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
-  -- local colorscheme = "rosebones"             -- supports light/dark -- rosey colors, dark variant has blue bg
+  -- local colorscheme = "rosebones"            -- supports light/dark -- rosey colors, dark variant has blue bg
   -- local colorscheme = "vimbones"             -- supports light      -- bright green, it's ok
   -- local colorscheme = "neobones"             -- supports light/dark -- nice -- light is minty, dark is a deep sea blue
   -- local colorscheme = "seoulbones"           -- supports light/dark -- mid -- low contrast, bright colors
@@ -110,6 +115,11 @@ function M.config()
   -- local colorscheme = "nordbones"            -- supports dark       -- mid
   -- local colorscheme = "randombones"          -- picks a random zenbones theme --
   --
+
+  -- THEME:
+  -- Nordic by alexvzyl
+  -- Warmer variant of nord, has some oranges and yellows
+  -- local colorscheme = "nordic"               -- dark theme
 
   -- THEME:
   -- Catppuccin by catppuccin group
@@ -162,6 +172,11 @@ function M.config()
   -- local colorscheme = "darkplus"            -- supports light/dark
 
   -- THEME:
+  -- miasma by xero
+  -- dark and woodsy
+  -- local colorscheme = "miasma"            -- supports light/dark
+
+  -- THEME:
   -- quiet (built in theme)
   -- light or dark, very minimal
   --
@@ -206,7 +221,7 @@ function M.config()
   define_language_colors({
     filetype = "*.vue",
     litemode = "neobones",
-    darkmode = "everforest",
+    darkmode = "miasma",
   })
 end
 
