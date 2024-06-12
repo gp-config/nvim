@@ -11,6 +11,8 @@ end
 -- INFO: create an autocmd for the given file type.
 --       when it runs, it will set the current color scheme.
 local function define_language_colors(opts)
+  local todocomments = require("todo-comments.init")
+
   vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
     pattern = opts.filetype,
     callback = function()
@@ -28,6 +30,12 @@ local function define_language_colors(opts)
       else
         -- print("[AUTO THEME][DARK MODE]", opts.filetype, opts.darkmode)
         set_colorscheme(opts.darkmode)
+      end
+
+      -- BUGFIX: setting the colorscheme messes up todo-comments (highlighting gets disabled),
+      --         so we reset it here any time we're changing themes.
+      if todocomments then
+        todocomments.reset()
       end
 
       -- INFO: call the `after` callback if its defined
