@@ -1,6 +1,43 @@
 --stylua: ignore start
 require "user.launch"
 
+local function set_colorscheme(colorscheme)
+  local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+  if not status_ok then
+    return
+  end
+end
+
+-- INFO: create an autocmd for the given file type.
+--       when it runs, it will set the current color scheme.
+local function define_language_colors(opts)
+  vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
+    pattern = opts.filetype,
+    callback = function()
+
+      -- INFO: call the `before` callback if its defined;
+      --       it's for writing additional theme setup code before setting the color scheme.
+      --       stuff like setting `g:gruvbox_material_background = 'hard'`
+      if opts.before then
+        opts.before()
+      end
+
+      if vim.o.background == "light" then
+        set_colorscheme(opts.litemode)
+        -- print("[AUTO THEME][LIGHT MODE]", opts.filetype, opts.litemode)
+      else
+        -- print("[AUTO THEME][DARK MODE]", opts.filetype, opts.darkmode)
+        set_colorscheme(opts.darkmode)
+      end
+
+      -- INFO: call the `after` callback if its defined
+      if opts.after then
+        opts.after()
+      end
+    end
+  })
+end
+
 local M = {
   -- "LunarVim/primer.nvim",
 
@@ -109,10 +146,53 @@ function M.config()
   --
   -- local colorscheme = "darkplus"            -- supports light/dark
 
-  local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-  if not status_ok then
-    return
-  end
+  -- THEME:
+  -- quiet (built in theme)
+  -- light or dark, very minimal
+  --
+  -- local colorscheme = "quiet"                  -- light/dark
+
+
+
+
+  -- INFO: set the fallback/default colorscheme
+
+  set_colorscheme(colorscheme)
+
+  -- INFO: auto-set colorscheme for certain file types
+
+  define_language_colors({
+    filetype = "*.rs",
+    litemode = "tokyobones",
+    darkmode = "gruvbox-material",
+    before = function()
+      vim.g.gruvbox_material_background = "hard"
+    end,
+  })
+
+  define_language_colors({
+    filetype = "*.ts,*.js,*.tsx,*.jsx",
+    litemode = "tokyobones",
+    darkmode = "catppuccin-mocha",
+  })
+
+  define_language_colors({
+    filetype = "*.lua",
+    litemode = "vimbones",
+    darkmode = "everforest",
+  })
+
+  define_language_colors({
+    filetype = "*.svelte,*.svelte.ts,*.svelte.js",
+    litemode = "melange",
+    darkmode = "melange",
+  })
+
+  define_language_colors({
+    filetype = "*.vue",
+    litemode = "neobones",
+    darkmode = "everforest",
+  })
 end
 
 return M
