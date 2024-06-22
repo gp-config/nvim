@@ -175,3 +175,6 @@ keymap("n", "<leader>a", "<cmd>Navbuddy<cr>", opts) -- toggle symbols panel (aer
 -- keymap("n", "<leader>h4", "<cmd> lua require'harpoon.mark'.add_current_file(4)<cr>", opts)
 
 keymap("n", "<C-CR>", "lua cmp.complete({reason = cmp.ContextReason.Auto})", opts)
+
+-- rebind * to not jump to the next occurrence
+keymap("n", "*", "<cmd>let @/ = expand('<cword>') | set hlsearch<cr>")
