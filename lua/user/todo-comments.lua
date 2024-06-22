@@ -2,7 +2,7 @@
 -- This plugin will highlight the following comments:
 --
 --
--- DEFAULT KEYWORDS
+-- COMMON KEYWORDS
 ----------------------
 --
 -- FIX:
@@ -11,6 +11,7 @@
 -- BUGFIX:
 -- ISSUE:
 -- TODO:
+-- LATER:
 -- DANGER:
 -- HACK:
 -- WARN:
@@ -59,7 +60,7 @@ local M = {
         },
 
       },
-      TODO = { icon = " ", color = "error" },
+      TODO = { icon = " ", color = "error", alt = { "LATER" } },
       HACK = { icon = " ", color = "warning" },
       WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
       PERF = { icon = "󱦺 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
