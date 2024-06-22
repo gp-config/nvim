@@ -124,6 +124,8 @@ recent keybinds:
     - highlighting a bunch of text (e.g. inside "") and pasting from system clipboard `"+p`
 </details>
 
+# TODO:
+
 <details>
 <summary>TODO</summary>
 

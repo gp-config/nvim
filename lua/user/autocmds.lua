@@ -61,9 +61,15 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
+-- INFO: format on save
+--       on by default. use telescope-menu commands to turn it off per-session.
+
+vim.g.gp__save_on_format_enabled = true
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function()
-    vim.lsp.buf.format()
+    if vim.g.gp__save_on_format_enabled then
+      vim.lsp.buf.format()
+    end
   end,
 })
 
