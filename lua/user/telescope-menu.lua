@@ -26,6 +26,33 @@ function M.config()
             { "TreeSitter: InspectTree", "InspectTree" },
             { "Undo/Redo History for current buffer", "Telescope undo" },
             { "Jumplist History", "Telescope jumplist" },
+            { "List TODO Comments (Telescope)", "TodoTelescope keywords=TODO" },
+            { "List LATER Comments (Telescope)", "TodoTelescope keywords=LATER" },
+            {
+              "Enable auto-colorscheme for file type",
+              function()
+                vim.g.gp_autocolor_enabled = true
+              end,
+            },
+            {
+              "Disable auto-colorscheme for file type",
+              function()
+                vim.g.gp_autocolor_enabled = false
+              end,
+            },
+
+            {
+              "Enable format on save",
+              function()
+                vim.g.gp__save_on_format_enabled = true
+              end,
+            },
+            {
+              "Disable format on save",
+              function()
+                vim.g.gp__save_on_format_enabled = false
+              end,
+            },
 
             { "LspInfo", "LspInfo" },
             { "LSP: Find References / Usages", "Telescope lsp_references" },
