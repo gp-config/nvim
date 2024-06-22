@@ -5,6 +5,10 @@ local function colorscheme_is_already_set(colorscheme)
   return vim.g.colors_name == colorscheme
 end
 
+local function autocolor_is_disabled()
+  return vim.g.gp_autocolor_enabled == false
+end
+
 local function set_colorscheme(colorscheme)
   local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
   if not status_ok then
@@ -22,6 +26,11 @@ local function define_language_colors(opts)
   vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
     pattern = opts.filetype,
     callback = function()
+
+      -- INFO: bail out if the auto color theme feature is disabled
+      if autocolor_is_disabled() then
+        return
+      end
 
       -- INFO: bail out if we're already using one of the correct themes
       if colorscheme_is_already_set(opts.litemode) then
@@ -103,7 +112,7 @@ function M.config()
   -- a set of minimal, low-color themes with high text contrast.
   -- lots of good, high-focus light and dark options.
   --
-  local colorscheme = "zenbones"             -- supports light/dark --
+  -- local colorscheme = "zenbones"             -- supports light/dark --
   -- local colorscheme = "tokyobones"           -- supports light/dark -- light/dark both nice for elixir
   -- local colorscheme = "kanagawabones"        -- supports dark       -- nice
   -- local colorscheme = "forestbones"          -- supports light/dark -- dark is nice
@@ -182,6 +191,12 @@ function M.config()
   --
   -- local colorscheme = "quiet"                  -- light/dark
 
+  -- THEME:
+  -- default (built in theme)
+  -- new default light or dark theme for neovim (version >= 0.10.0), VERY nice!
+  --
+  local colorscheme = "default"                  -- light/dark
+
 
 
 
@@ -190,6 +205,8 @@ function M.config()
   set_colorscheme(colorscheme)
 
   -- INFO: auto-set colorscheme for certain file types
+
+  vim.g.gp_autocolor_enabled = true
 
   define_language_colors({
     filetype = "*.rs",
@@ -210,6 +227,8 @@ function M.config()
     filetype = "*.lua",
     litemode = "vimbones",
     darkmode = "everforest",
+    -- litemode = "default",
+    -- darkmode = "default",
   })
 
   define_language_colors({
