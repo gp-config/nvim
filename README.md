@@ -150,5 +150,6 @@ recent keybinds:
 - [ ] use ~~ranger~~ yazi as filebrowser by default, but fall back to triptych when not available
 - [ ] try mini.completion instead of nvim-cmp
   - it seems to have debounce settings out of the box, and may be async? (cmp doesn't really feel like it's async)
+- [ ] in the status line, show the number of characters currently selected (if theres an active selection)
 
 </details>
