@@ -176,5 +176,24 @@ keymap("n", "<leader>a", "<cmd>Navbuddy<cr>", opts) -- toggle symbols panel (aer
 
 keymap("n", "<C-CR>", "lua cmp.complete({reason = cmp.ContextReason.Auto})", opts)
 
--- rebind * to not jump to the next occurrence
+-- INFO: rebind * to not jump to the next occurrence
 keymap("n", "*", "<cmd>let @/ = expand('<cword>') | set hlsearch<cr>")
+-- TODO: Make this work in visual and visual-block mode too
+-- keymap("v", "*", "<cmd>let @/ = expand('<cword>') | set hlsearch<cr>")
+-- keymap("v", "*", '<cmd>"zy | let @/ = @z | set hlsearch<cr>')
+-- keymap("x", "*", '<cmd>"zy | let @/ = @z | set hlsearch<cr>')
+
+-- INFO: yank without losing selection.
+--       has the side effect of making   Vyp   not work (becomes  Vy<esc>p  ).
+--       a new bind is added in order to do that 'duplicate line' operation.
+-- DEPRECATED: affects workflow too much.   Vyp    , viw<up>p     , probably more ..
+-- keymap("v", "y", "ygv")
+-- keymap("x", "y", "ygv")
+-- keep the duplicate commands though:
+keymap("n", "<leader>d<down>", "yyp") -- duplicate DOWN (normal mode)
+keymap("n", "<leader>d<up>", "yyP") -- duplicate UP (normal mode)
+keymap("x", "<leader>d<down>", "ygv<esc>p") -- duplicate DOWN (visual block mode)
+keymap("x", "<leader>d<up>", "ygv<esc>p") -- duplicate UP (visual block mode)
+
+keymap("v", "<leader>d<down>", "ygv<esc>pi<cr><esc>w") -- duplicate DOWN (visual mode)
+keymap("v", "<leader>d<up>", "yP") -- duplicate UP (visual mode)
