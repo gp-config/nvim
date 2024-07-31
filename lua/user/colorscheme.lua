@@ -97,8 +97,8 @@ function M.config()
   -- THEME:
   -- Choose LIGHT or DARK!
   --
-  -- vim.o.background = "dark"
-  vim.o.background = "light"
+  vim.o.background = "dark"
+  -- vim.o.background = "light"
 
   -- THEME:
   -- gp :: oxographene
@@ -241,6 +241,12 @@ function M.config()
     filetype = "*.vue",
     litemode = "neobones",
     darkmode = "miasma",
+  })
+
+  define_language_colors({
+    filetype = "*.ex,*.exs",
+    litemode = "tokyobones",
+    darkmode = "rosebones",
   })
 end
 
