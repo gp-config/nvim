@@ -11,11 +11,11 @@ function M.config()
         enable = true,
         swap_next = {
           -- TODO: a which-key label for this
-          ["<leader>s<Right>"] = "@parameter.inner",
+          ["<leader>s<Right>"] = { query = { "@parameter.inner", "@attribute.inner" } },
         },
         swap_previous = {
           -- TODO: a which-key label for this
-          ["<leader>s<Left>"] = "@parameter.inner",
+          ["<leader>s<Left>"] = { query = { "@parameter.inner", "@attribute.inner" } },
         },
       },
     },
