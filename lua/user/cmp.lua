@@ -147,8 +147,8 @@ function M.config()
         end
 
         -- vim_item.kind = icons.kind[vim_item.kind] -- INFO: Only icon
-        vim_item.kind = string.format("%s", vim_item.kind) -- INFO: Only text
-        -- vim_item.kind = string.format("%s %s ", vim_item.kind, icons.kind[vim_item.kind]) -- INFO: icon and text
+        -- vim_item.kind = string.format("%s", vim_item.kind) -- INFO: Only text
+        vim_item.kind = string.format("%s %s ", vim_item.kind, icons.kind[vim_item.kind]) -- INFO: icon and text
 
         -- INFO: Menu variant - no icons
         -- vim_item.menu = ({
@@ -256,7 +256,7 @@ function M.config()
       },
       ---@diagnostic disable-next-line: missing-fields
       documentation = {
-        -- border = "rounded",
+        border = "rounded",
         winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,Search:None",
       },
     },
