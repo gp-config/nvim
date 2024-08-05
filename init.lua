@@ -5,6 +5,7 @@ require "user.gui-clients"                -- settings specific to GUI clients (e
 require "user.keymaps"                    -- basic key bindings (there's more keybinds in which-key and other plugin configuration)
 require "user.autocmds"                   -- vim auto-commands (vim.api.nvim_create_autocmd)
 require "user.languages"                  -- supported languages - used by mason, treesitter, mason-lspconfig, and lspconfig
+require "gp.navigation"                   -- WIP
 --
 spec "user.colorscheme"                   -- colors!
 spec "user.mason"                         -- mason: package manager UI
