@@ -12,6 +12,7 @@
 -- ISSUE:
 -- TODO:
 -- LATER:
+-- ERROR:
 -- DANGER:
 -- HACK:
 -- WARN:
@@ -58,8 +59,17 @@ local M = {
         alt = {           -- a set of other keywords that all map to this FIX keywords
           "FIXME", "BUG", "BUGFIX", "ISSUE", "DANGER"
         },
-
       },
+
+      ERROR = {
+        icon = " ",      -- icon used for the sign, and in search results
+        color = "error",  -- can be a hex color, or a named color (see below)
+        -- signs = false, -- configure signs for some keywords individually
+        alt = {           -- a set of other keywords that all map to this FIX keywords
+          "ERR",
+        },
+      },
+
       TODO = { icon = " ", color = "error", alt = { "LATER" } },
       HACK = { icon = " ", color = "warning" },
       WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
