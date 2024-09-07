@@ -94,11 +94,20 @@ local M = {
 function M.config()
   vim.o.termguicolors = true
 
-  -- THEME:
+  -- INFO:
   -- Choose LIGHT or DARK!
   --
-  vim.o.background = "dark"
+  -- vim.o.background = "dark"
   -- vim.o.background = "light"
+  --
+  -- Or use the function below to use the last color scheme that was set.
+  local initial_colormode = require("user.submodules.colormode-saver").get_color_mode()
+  if initial_colormode == "light" then
+    vim.o.background = "light"
+  else
+    vim.o.background = "dark"
+  end
+
 
   -- THEME:
   -- gp :: oxographene
@@ -249,5 +258,4 @@ function M.config()
     darkmode = "rosebones",
   })
 end
-
 return M

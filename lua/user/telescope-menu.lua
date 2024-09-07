@@ -15,8 +15,18 @@ function M.config()
             --                                         or { "<display>", function() end }
             --                                         or { display = "<display>", value = "<command>" }
             --
-            { "Light Mode", "lua vim.o.background = 'light'" },
-            { "Dark Mode", "lua vim.o.background = 'dark'" },
+            {
+              "Light Mode",
+              function()
+                require("user.submodules.colormode-saver").set_color_mode "light"
+              end,
+            },
+            {
+              "Dark Mode",
+              function()
+                require("user.submodules.colormode-saver").set_color_mode "dark"
+              end,
+            },
             { "SUBMENU: Theme / Colorscheme", "Telescope colorscheme" },
             { "SUBMENU: Neovide", "Telescope menu neovide" },
             { "SUBMENU: Format", "Telescope menu format" },
